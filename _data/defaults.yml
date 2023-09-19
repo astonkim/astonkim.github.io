@@ -1,4 +1,4 @@
 home:
-  heading: "Your awesome heading"
-  subheading: "Your awesome subheading"
-  banner: "Your image url"
+  heading: '"사람처럼 학습하는 기계"를 학습하는 Aston의 AI Data Lab'
+  subheading: "#머신러닝 #딥러닝 #데이터분석 #데이터시각화 #python #pytorch #tableau #mysql #kaggle "
+  banner: ""
