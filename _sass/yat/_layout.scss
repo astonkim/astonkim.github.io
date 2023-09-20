@@ -641,10 +641,12 @@ html {
       > :nth-child(2) {
         font-weight: lighter;
         margin-bottom: 0.8em;
+        margin-top: 3.0em;
         transition: 0.2s all;
 
         @include media-query($on-palm) {
           @include relative-font-size(1.005);
+
         }
       }
 

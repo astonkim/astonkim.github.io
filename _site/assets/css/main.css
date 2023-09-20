@@ -798,6 +798,7 @@ html[data-scroll-status=down] .framework .sidebar {
 .page-banner .page-banner-inner > *:first-child > :nth-child(2) {
   font-weight: lighter;
   margin-bottom: 0.8em;
+  margin-top: 3em;
   transition: 0.2s all;
 }
 @media screen and (max-width: 600px) {
