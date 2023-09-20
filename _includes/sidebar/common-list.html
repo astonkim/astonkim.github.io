@@ -9,14 +9,14 @@
 <div class="common-list">
   <ul>
     <li>
-      <a href="{{ '/index.html' | relative_url }}">
-        All<span>{{ site.posts.size }}</span>
+      <a href="{{ '/index.html' | relative_url }}" style="font-family: 'Chakra Petch'; font-weight: bold;" >
+        Look ALL<span>{{ site.posts.size }}</span>
       </a>
     </li>
 
     {% for key in  keys %}
       <li>
-        <a href="{{ url }}#h-{{ key }}">
+        <a href="{{ url }}#h-{{ key }}" style="font-family: 'Chakra Petch'; font-weight: medium;">
           {{ key }} <span>{{ site.posts | where: field, key | size }}</span>
         </a>
       </li>

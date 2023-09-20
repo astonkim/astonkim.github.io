@@ -1,6 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Roboto+Slab&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch&family=Noto+Sans+KR&family=Roboto+Slab&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;700&family=Noto+Sans+KR:wght@400;500;700;800&family=Roboto+Slab&display=swap");
 /**
  * Reset some basic elements
  */
@@ -15,7 +13,7 @@ dl, dd, ol, ul, figure {
  * Basic styling
  */
 body {
-  font-family: "Noto Sans KR", "Chakra Petch" sans-serif, "Roboto Slab", serif;
+  font-family: "Noto Sans KR", sans-serif;
   font-weight: 400;
   font-size: 14px;
   font-display: swap;
@@ -789,7 +787,7 @@ html[data-scroll-status=down] .framework .sidebar {
   font-size: 54.6px;
   letter-spacing: -1px;
   margin-bottom: 0.1em;
-  font-weight: normal;
+  font-weight: bold;
   transition: 0.2s all;
 }
 @media screen and (max-width: 600px) {
@@ -881,6 +879,7 @@ html[data-scroll-status=down] .framework .sidebar {
   list-style: none;
 }
 .page-segments .segment-name {
+  font-family: "Chakra Petch";
   font-weight: 600;
   margin-bottom: 8px;
   position: relative;
@@ -1271,7 +1270,7 @@ html[data-theme=dark] a:visited .post-badges .post-badge.badge-new {
   display: inline-block;
   border-radius: 10px;
   align-self: center;
-  background: rgba(0, 0, 0, 0.7411764706);
+  background: orange;
   padding: 0px 8px;
   margin-left: 20px;
   color: #fdfdfd;

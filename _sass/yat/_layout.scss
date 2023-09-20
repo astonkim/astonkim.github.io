@@ -630,7 +630,7 @@ html {
         @include relative-font-size(3.9);
         letter-spacing: -1px;
         margin-bottom: 0.1em;
-        font-weight: normal;
+        font-weight: bold;
         transition: 0.2s all;
 
         @include media-query($on-palm) {
@@ -734,6 +734,7 @@ html {
   }
 
   .segment-name {
+    font-family: 'Chakra Petch';
     font-weight: $base-font-weight * 1.5;
     margin-bottom: 8px;
     position: relative;
