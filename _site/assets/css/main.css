@@ -802,7 +802,7 @@ html[data-scroll-status=down] .framework .sidebar {
 }
 @media screen and (max-width: 600px) {
   .page-banner .page-banner-inner > *:first-child > :nth-child(2) {
-    font-size: 16.45px;
+    font-size: 14.07px;
   }
 }
 .page-banner .page-banner-inner > *:first-child > :last-child {
