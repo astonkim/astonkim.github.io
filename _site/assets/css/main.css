@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Roboto+Slab&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch&family=Noto+Sans+KR&family=Roboto+Slab&display=swap");
 /**
  * Reset some basic elements
  */
@@ -14,7 +15,7 @@ dl, dd, ol, ul, figure {
  * Basic styling
  */
 body {
-  font-family: "Noto Sans KR", sans-serif, "Roboto Slab", serif;
+  font-family: "Noto Sans KR", "Chakra Petch" sans-serif, "Roboto Slab", serif;
   font-weight: 400;
   font-size: 14px;
   font-display: swap;
