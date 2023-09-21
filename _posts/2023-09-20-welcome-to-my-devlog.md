@@ -5,18 +5,14 @@ subtitle: 이 블로그의 방향성에 대하여...
 author: astonkim
 categories: Aston_Kim
 banner:
-  video:
-  loop: true
-  volume: 0.8
-  start_at: 8.5
   image: /assets/images/20230920.jpg
   opacity: 0.618
   background: "#000"
   height: "100vh"
   min_height: "38vh"
-  heading_style: "font-size: 4.25em; font-weight: bold;"
+  heading_style: "font-size: 4.25em; font-weight: bold; text-shadow: 5px 6px 5px black;"
   subheading_style: "color: gold"
-tags: etc
+tags: [github, github_블로그]
 top: 1
 sidebar: []
 ---
