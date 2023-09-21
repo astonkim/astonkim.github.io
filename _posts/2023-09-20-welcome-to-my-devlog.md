@@ -11,8 +11,8 @@ banner:
   height: "100vh"
   min_height: "38vh"
   heading_style: "font-weight: bold; text-shadow: 5px 6px 5px black;"
-  subheading_style: "color: gold"
-tags: [github, github_블로그]
+  subheading_style: "font-weight: bold; color: gold"
+tags: [github_블로그]
 top: 1
 sidebar: []
 ---

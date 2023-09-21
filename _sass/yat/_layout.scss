@@ -539,9 +539,9 @@ html {
   .previous:before {
     content: ' ';
     border: solid orangered;
-    border-width: 0 2.5px 2.5px 0;
+    border-width: 0 2px 2px 0;
     display: inline-block;
-    padding: 8px;
+    padding: 4px;
     vertical-align: middle;
     margin-right: 8px;
     transform: rotate(135deg);
@@ -551,9 +551,9 @@ html {
   .next:after {
     content: ' ';
     border: solid orangered;
-    border-width: 0 2.5px 2.5px 0;
+    border-width: 0 2px 2px 0;
     display: inline-block;
-    padding: 8px;
+    padding: 4px;
     vertical-align: middle;
     margin-left: 8px;
     transform: rotate(-45deg);
