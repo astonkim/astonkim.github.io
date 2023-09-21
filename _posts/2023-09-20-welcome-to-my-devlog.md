@@ -10,7 +10,7 @@ banner:
   background: "#000"
   height: "100vh"
   min_height: "38vh"
-  heading_style: "font-size: 4.25em; font-weight: bold; text-shadow: 5px 6px 5px black;"
+  heading_style: "font-weight: bold; text-shadow: 5px 6px 5px black;"
   subheading_style: "color: gold"
 tags: [github, github_블로그]
 top: 1

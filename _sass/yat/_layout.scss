@@ -533,15 +533,16 @@ html {
     @include relative-font-size(1.125);
     color: $grey-color;
     line-height: 15px;
-    max-width: 50%;
+    max-width: 40%;
   }
 
   .previous:before {
     content: ' ';
-    border: solid #787878;
-    border-width: 0 2px 2px 0;
+    border: solid orangered;
+    border-width: 0 2.5px 2.5px 0;
     display: inline-block;
-    padding: 4px;
+    padding: 8px;
+    vertical-align: middle;
     margin-right: 8px;
     transform: rotate(135deg);
     -webkit-transform: rotate(135deg);
@@ -549,10 +550,11 @@ html {
 
   .next:after {
     content: ' ';
-    border: solid #787878;
-    border-width: 0 2px 2px 0;
+    border: solid orangered;
+    border-width: 0 2.5px 2.5px 0;
     display: inline-block;
-    padding: 4px;
+    padding: 8px;
+    vertical-align: middle;
     margin-left: 8px;
     transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
