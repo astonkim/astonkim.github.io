@@ -964,25 +964,27 @@ function googleTranslateElementInit() {
 
     <div class="post-content e-content" itemprop="articleBody">
 
-      <p>Apple의 <strong>M1 Silicon Mac 환경</strong>에서 github.io 블로그를 만들어보고자 한다.</p>
+      <p><span style="color:orangered"> Apple의 <strong>M1 Silicon Mac 환경</strong></span>에서 github.io 블로그를 만들어보고자 한다.</p>
 
 <p>현재의 나와 같을 미래의 초보 개발자들을 위해 필자가 겪었던 오류 뿐만 아니라, 과정을 자세히(친절히) 풀어 써보고자 한다.</p>
 
 <h2 id="1-1-ruby-rbenv-설치">1-1. Ruby (rbenv 설치)</h2>
 
-<p>Mac 유저 중 github.io 블로그를 만들기 위해 구글링을 해본 사람들은 다들 프로세스를 따라하다가 <strong>Ruby 설치 과정에서 다음과 같은 오류</strong>를 직면한다. (필자도 그랬음.)</p>
+<p>Mac 유저 중 github.io 블로그를 만들기 위해 구글링을 해본 사람들은 다들 프로세스를 따라하다가 <span style="color:orangered"> <strong>Ruby 설치 과정에서 다음과 같은 오류</strong></span>를 직면한다. (필자도 그랬음.)</p>
 
 <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>gem <span class="nb">install </span>bundler
 
 ERROR:  While executing gem ... <span class="o">(</span>Gem::FilePermissionError<span class="o">)</span>
     You don<span class="s1">'t have write permissions for the /Library/Ruby/Gems/2.3.0 directory.
 </span></code></pre></div></div>
-<p><br>
-<strong>Mac은 시스템에서 이미 Ruby를 사용하고 있기 때문에,</strong> 시스템에 이미 있던 Ruby에서 <code class="language-plaintext highlighter-rouge">gem install bundler</code> 명령어를 실행하면 다음과 같이 <strong>Permission Error</strong>가 나는 것!</p>
+
+<p><br></p>
+
+<p><span style="color:orangered"> <strong>Mac은 시스템에서 이미 Ruby를 사용하고 있기 때문에,</strong> </span>시스템에 이미 있던 Ruby에서 <code class="language-plaintext highlighter-rouge">gem install bundler</code> 명령어를 실행하면 다음과 같이 <span style="color:orangered"> <strong>Permission Error</strong></span>가 나는 것!</p>
 
 <p>이 때 당황하지 말고,</p>
 
-<p><strong>brew를 먼저 update</strong> 후, <strong><code class="language-plaintext highlighter-rouge">brew</code>를 통해 <code class="language-plaintext highlighter-rouge">rbenv</code>를 설치</strong>하자.</p>
+<p><span style="color:orangered"> <strong>brew를 먼저 update</strong> 후, <strong><code class="language-plaintext highlighter-rouge">brew</code>를 통해 <code class="language-plaintext highlighter-rouge">rbenv</code>를 설치</strong>하자.</span></p>
 
 <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>brew update
 </code></pre></div></div>
@@ -1003,7 +1005,7 @@ ERROR:  While executing gem ... <span class="o">(</span>Gem::FilePermissionError
 
 <p><br></p>
 
-<p>맥 system Ruby가 아닌, <strong>rbenv로 관리되는 Ruby 설치가 필요</strong>하다.</p>
+<p>맥 system Ruby가 아닌, <span style="color:orangered"> <strong>rbenv로 관리되는 Ruby 설치가 필요</strong></span>하다.</p>
 
 <p>다음 명령어로 <strong>설치 가능한 Ruby의 버전들을 먼저 확인</strong>하자.</p>
 
@@ -1042,13 +1044,13 @@ ERROR:  While executing gem ... <span class="o">(</span>Gem::FilePermissionError
 <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>rbenv versions
 </code></pre></div></div>
 
-<p>다음과 같이 별 기호가 성공적으로 3.2.2 옆으로 옮겨 간 것을 볼 수 있다. (3.2.2 버전을 global로 사용중)</p>
+<p>다음과 같이 별 기호가 성공적으로 3.2.2 옆으로 옮겨 간 것을 볼 수 있다. (즉, 3.2.2 버전을 global로 사용중)</p>
 
 <p><img src="https://i.imgur.com/MjW9P43.png" alt=""></p>
 
 <p><br></p>
 
-<p>마지막으로는, <strong>rbenv PATH를 추가</strong>해 주어야 하는데, 본인이 사용하는 Shell의 설정파일(<code class="language-plaintext highlighter-rouge">.zshrc</code> 또는 <code class="language-plaintext highlighter-rouge">.bashrc</code>)을 열어 다음과 같은 코드를 추가하자.</p>
+<p>마지막으로는, <span style="color:orangered"> <strong>rbenv PATH를 추가</strong></span>해 주어야 하는데, <span style="color:orangered"> 본인이 사용하는 Shell의 설정파일(<code class="language-plaintext highlighter-rouge">.zshrc</code> or <code class="language-plaintext highlighter-rouge">.bashrc</code>)을 열어</span> 다음과 같은 코드를 추가하자.</p>
 
 <p>다음 명령어로 <strong><code class="language-plaintext highlighter-rouge">.zshrc</code> 설정파일</strong>을 열어보자. <strong>(필자는 zsh를 사용)</strong></p>
 
@@ -1068,20 +1070,27 @@ ERROR:  While executing gem ... <span class="o">(</span>Gem::FilePermissionError
 
 <p>그러고 나서 처음에 오류가 났던 <code class="language-plaintext highlighter-rouge">gem install bundler</code> 명령어를 실행하면, 정상적으로 실행된다.</p>
 
+<p><br></p>
+
 <h2 id="1-2-jekyll--bundler-설치">1-2. Jekyll &amp; bundler 설치</h2>
 
-<p>다음으로는 <strong><code class="language-plaintext highlighter-rouge">gem install</code> 명령어</strong>로 <strong>Jekyll, 그리고 bundler</strong>를 설치해야한다.</p>
+<p>다음으로는 <span style="color:orangered"> <strong><code class="language-plaintext highlighter-rouge">gem install</code> 명령어</strong>로 <strong>Jekyll, bundler</strong>를 설치</span>해야한다.</p>
 
 <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>gem <span class="nb">install </span>jekyll bundler
 </code></pre></div></div>
+
 <p><br></p>
 
 <blockquote>
-  <p><strong><em>NOTE:</em> What is ‘gem’?</strong></p>
+  <p><strong>📙 NOTE: What is ‘gem’?</strong></p>
 
   <ul>
-    <li>‘gem’은 분산 패키지 시스템으로 라이브러리의 작성이나 공개, 설치를 도와주는 시스템.</li>
-    <li>Linux에서의 apt 시스템과 유사하다. Ruby는 gem을 사용하여 라이브러리 설치를 진행한다는 것을 알아두자!</li>
+    <li>
+      <p>‘gem’은 분산 패키지 시스템으로 라이브러리의 작성이나 공개, 설치를 도와주는 시스템.</p>
+    </li>
+    <li>
+      <p>Linux에서의 apt 시스템과 유사하다. Ruby는 gem을 사용하여 라이브러리 설치를 진행한다는 것을 알아두자!</p>
+    </li>
   </ul>
 </blockquote>
 
@@ -1100,12 +1109,20 @@ ERROR:  While executing gem ... <span class="o">(</span>Gem::FilePermissionError
 
 </article>
 <div class="post-nav">
-<a class="previous" href="/aston_kim/2023/09/20/welcome-to-my-devlog.html" title="Opening my devlog! 🎉">Opening my devlog! 🎉</a><span></span>
+<a class="previous" href="/aston_kim/2023/09/20/welcome-to-my-devlog.html" title="Opening my devlog! 🎉">Opening my devlog! 🎉</a><a class="next" href="/github/2023/09/22/github-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0-2.html" title="Github.io 블로그 만들기 - 2">Github.io 블로그 만들기 - 2</a>
 </div>
 <div class="post-related">
       <div>Related Articles</div>
       <ul>
         <li class="top-post">
+          <a class="post-link" href="/github/2023/09/22/github-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0-2.html" title="Github.io 블로그 만들기 - 2">
+            Github.io 블로그 만들기 - 2<span class="post-badges">
+  <span class="post-badge badge-top">TOP</span>
+  <span class="post-badge badge-new">NEW</span>
+</span>
+</a>
+        </li>
+<li class="top-post">
           <a class="post-link" href="/aston_kim/2023/09/20/welcome-to-my-devlog.html" title="Opening my devlog! 🎉">
             Opening my devlog! 🎉<span class="post-badges">
   <span class="post-badge badge-top">TOP</span>

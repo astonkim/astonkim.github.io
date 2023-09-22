@@ -106,8 +106,8 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-  color: $brand-color;
-  text-decoration: none;
+  color: orange;
+  text-decoration: underline;
 
   &:hover {
     text-decoration: underline;

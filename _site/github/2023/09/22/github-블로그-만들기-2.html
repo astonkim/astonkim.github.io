@@ -7,21 +7,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="google-translate-customization" content="108d9124921d80c3-80e20d618ff053c8-g4f02ec6f3dba68b7-c">
 <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Tags | DS/ML Devlog</title>
+<title>Github.io 블로그 만들기 - 2 | DS/ML Devlog</title>
 <meta name="generator" content="Jekyll v4.3.2">
-<meta property="og:title" content="Tags">
-<meta name="author" content="Aston Kim">
+<meta property="og:title" content="Github.io 블로그 만들기 - 2">
+<meta name="author" content="astonkim">
 <meta property="og:locale" content="en_US">
-<meta name="description" content="공부한 내용들을 잊지 않게 기록하고 공유하고자 끄적이는 Devlog 입니다. 주로 Data와 Machine Learning, Deep Learning에 대해 다룹니다.">
-<meta property="og:description" content="공부한 내용들을 잊지 않게 기록하고 공유하고자 끄적이는 Devlog 입니다. 주로 Data와 Machine Learning, Deep Learning에 대해 다룹니다.">
-<link rel="canonical" href="http://localhost:4000/tags.html">
-<meta property="og:url" content="http://localhost:4000/tags.html">
+<meta name="description" content="2-1. Github에서 새로운 Repository 생성">
+<meta property="og:description" content="2-1. Github에서 새로운 Repository 생성">
+<link rel="canonical" href="http://localhost:4000/github/2023/09/22/github-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0-2.html">
+<meta property="og:url" content="http://localhost:4000/github/2023/09/22/github-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0-2.html">
 <meta property="og:site_name" content="DS/ML Devlog">
-<meta property="og:type" content="website">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2023-09-22T00:00:00+09:00">
 <meta name="twitter:card" content="summary">
-<meta property="twitter:title" content="Tags">
+<meta property="twitter:title" content="Github.io 블로그 만들기 - 2">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Aston Kim"},"description":"공부한 내용들을 잊지 않게 기록하고 공유하고자 끄적이는 Devlog 입니다. 주로 Data와 Machine Learning, Deep Learning에 대해 다룹니다.","headline":"Tags","url":"http://localhost:4000/tags.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"astonkim"},"dateModified":"2023-09-22T00:00:00+09:00","datePublished":"2023-09-22T00:00:00+09:00","description":"2-1. Github에서 새로운 Repository 생성","headline":"Github.io 블로그 만들기 - 2","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/github/2023/09/22/github-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0-2.html"},"url":"http://localhost:4000/github/2023/09/22/github-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0-2.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="icon" href="/assets/images/avatar.png">
   <link rel="canonical" href="http://localhost:4000">
@@ -321,7 +322,17 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
 
 
-<header class="site-header " role="banner">
+
+
+
+
+
+
+
+
+
+
+<header class="site-header site-header-transparent" role="banner">
 
   <div class="wrapper">
     <div class="site-header-inner">
@@ -504,7 +515,7 @@ function googleTranslateElementInit() {
     var documentElement = document.documentElement;
 
     function storeScrollData() {
-      var y = getScrollPos().y;var scrollStatus = "";
+      var y = getScrollPos().y;documentElement.setAttribute("data-header-transparent", "");var scrollStatus = "";
 
       if (y <= 0) {
         scrollStatus = "top";
@@ -670,7 +681,101 @@ function googleTranslateElementInit() {
 
 
 
-<script>
+
+
+
+
+
+
+
+
+
+
+<style>
+    html .page-banner {
+      background: #000;
+    }
+  </style>
+<style>html .page-banner {
+      height:  36.8vh;
+      min-height: 38vh;
+    }
+    html[data-scroll-status="top"] .page-banner {
+      height: 100vh;
+    }
+  </style>
+<style>
+    html .page-banner .page-banner-img > *:first-child {
+      opacity: 0.618;
+    }
+
+    html[data-theme="dark"] .page-banner .page-banner-img > *:first-child {
+      opacity: 0.443724;
+    }
+  </style>
+<style>
+    html .page-banner .page-banner-inner > *:first-child > *:nth-child(1) {
+      font-weight: bold; text-shadow: 5px 6px 5px black;
+    }
+  </style>
+<style>
+    html .page-banner .page-banner-inner > *:first-child > *:nth-child(2) {
+      font-weight: bold; color: gold
+    }
+  </style>
+<section class="page-banner">
+    <div class="page-banner-img">
+<div style="background-image: url(/assets/images/20230922.jpg)"></div>
+        <img class="img-placeholder" src="/assets/images/20230922.jpg">
+</div>
+    <div class="wrapper">
+      <div class="page-banner-inner">
+<header class="post-header">
+  <h1 class="post-title p-name" itemprop="name headline">Github.io 블로그 만들기 - 2</h1>
+  <h2 class="post-subtitle">2. Github에서 github.io Repository 만들고, Jekyll 테마 연결하기</h2>
+
+  <div class="post-meta">
+    <time class="dt-published" datetime="2023-09-22T00:00:00+09:00" itemprop="datePublished"><i class="fa fa-calendar"></i> Sep 22, 2023
+    </time><span class="post-author left-vsplit"><i class="fa fa-pencil"></i> astonkim</span>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 3 mins</span>
+  </div>
+<div class="post-tags"><a class="post-tag" href="/tags.html#github_%EB%B8%94%EB%A1%9C%EA%B7%B8">#github_블로그</a></div></header>
+</div>
+    </div>
+  </section><script>
   function hashLocate(hashValue) {
     hashValue = hashValue.replace(/^.*#h-/, '');
     hashValue = decodeURIComponent(hashValue);
@@ -844,7 +949,8 @@ function googleTranslateElementInit() {
         <div class="framework">
   <section class="main">
 
-     
+     <div class="post">
+  <section>
 
 
 
@@ -854,105 +960,182 @@ function googleTranslateElementInit() {
 
 
 
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
+    <div class="post-content e-content" itemprop="articleBody">
 
+      <h2 id="2-1-github에서-새로운-repository-생성">2-1. Github에서 새로운 Repository 생성</h2>
 
+<p>다음과 같이 <span style="color:orangered"> <strong>Repository name</strong> </span>은 <code class="language-plaintext highlighter-rouge">username.github.io</code>로 설정한다. <code class="language-plaintext highlighter-rouge">username</code>은 본인의 Github username을 의미한다.</p>
 
+<p><img src="https://i.imgur.com/VeIFHz8.png" alt=""></p>
 
+<p><br></p>
 
+<p>초록색 <code class="language-plaintext highlighter-rouge">&lt; &gt; Code</code> 버튼을 클릭해서 Local로 Clone할 때 필요한 <span style="color:orangered"> <strong>HTTPS 주소를 Copy</strong> </span>하자!</p>
 
+<p>(필자의 Repository는 무언가로 가득 차 있지만, 현재 단계로서는 방금 만들었기 때문에 비어있거나 README 파일 정도 들어가 있으면 성공!)</p>
 
-  
-  <div class="page-segments">
-  <ul class="page-segments-list">
-    
-    <h2 id="github_블로그" class="segment-name">github_블로그</h2>
-      
-      
-        <li class="top-post">
-<span class="post-meta">Sep 22, 2023</span>
-<span>
-  <a class="post-link" href="/github/2023/09/22/github-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0-2.html">
-    Github.io 블로그 만들기 - 2<span class="post-badges">
-  <span class="post-badge badge-top">TOP</span>
-  <span class="post-badge badge-new">NEW</span>
-</span>
-</a>
-</span>
-</li>
-        
-      
-        <li class="top-post">
-<span class="post-meta">Sep 21, 2023</span>
-<span>
-  <a class="post-link" href="/github/2023/09/21/github-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0-1.html">
-    Github.io 블로그 만들기 - 1<span class="post-badges">
-  <span class="post-badge badge-top">TOP</span>
-  <span class="post-badge badge-new">NEW</span>
-</span>
-</a>
-</span>
-</li>
-        
-      
-        <li class="top-post">
-<span class="post-meta">Sep 20, 2023</span>
-<span>
-  <a class="post-link" href="/aston_kim/2023/09/20/welcome-to-my-devlog.html">
-    Opening my devlog! 🎉<span class="post-badges">
-  <span class="post-badge badge-top">TOP</span>
-  <span class="post-badge badge-new">NEW</span>
-</span>
-</a>
-</span>
-</li>
-        
-      
-    
+<p><img src="https://i.imgur.com/utRN2DZ.png" alt=""></p>
+
+<p><br></p>
+
+<p>Github 블로그를 관리할 폴더를 하나 만든 후, 다음과 같은 <span style="color:orangered"> <strong>git clone 명령어</strong>를 실행하여 위의 Repository를 해당 폴더(로컬 환경)로 clone </span>해 온다.</p>
+
+<p>필자는 <code class="language-plaintext highlighter-rouge">/User/skykim</code> 안에 <code class="language-plaintext highlighter-rouge">Github</code>라는 폴더를 생성했기 때문에, 다음과 같은 <code class="language-plaintext highlighter-rouge">cd</code> 명령어로 해당 폴더로 이동한다.</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cd </span>Github
+</code></pre></div></div>
+
+<p>해당 폴더로 이동한 상태에서, 다음과 같은 git clone 명령어를 실행하자.</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git clone https://github.com/astonkim/astonkim.github.io.git
+</code></pre></div></div>
+
+<p>성공적으로 Clone 되었다면, <code class="language-plaintext highlighter-rouge">cd</code> 명령어로 클론된 <code class="language-plaintext highlighter-rouge">github.io</code> 폴더로 들어가자.</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cd </span>astonkim.github.io
+</code></pre></div></div>
+
+<p><br></p>
+
+<h2 id="2-2-마음에-드는-jekyll-테마-선택-후-다운로드">2-2. 마음에 드는 Jekyll 테마 선택 후, 다운로드</h2>
+
+<p><span style="color:orangered"> <strong>필자가 선택한 Jekyll 테마는 YAT!</strong> </span></p>
+
+<p>👉 <a href="https://jekyll-themes.com/jeffreytse/jekyll-theme-yat">https://jekyll-themes.com/jeffreytse/jekyll-theme-yat</a></p>
+
+<p>👉 <a href="https://github.com/jeffreytse/jekyll-theme-yat?ref=jekyll-themes.com">https://github.com/jeffreytse/jekyll-theme-yat?ref=jekyll-themes.com</a></p>
+
+<p>테마는 아래의 사이트들에서 무료 및 유료 테마를 보고 다운로드할 수 있다.</p>
+<ul>
+  <li><a href="http://jekyllthemes.org/">http://jekyllthemes.org/</a></li>
+  <li><a href="http://themes.jekyllrc.org/">http://themes.jekyllrc.org/</a></li>
+  <li><a href="https://jekyllthemes.io/">https://jekyllthemes.io/</a></li>
+  <li><a href="https://jekyll-themes.com/">https://jekyll-themes.com/</a></li>
+</ul>
+
+<p><br></p>
+
+<p>선택한 테마의 Github에서 초록색 <code class="language-plaintext highlighter-rouge">&lt; &gt; Code</code> 버튼 클릭 후, 가장 하단의 <code class="language-plaintext highlighter-rouge">Download ZIP</code>을 클릭하여 <code class="language-plaintext highlighter-rouge">.zip</code>파일을 다운로드하자.</p>
+
+<p><img src="https://i.imgur.com/dY3E3TM.png" alt=""></p>
+
+<p><br></p>
+
+<p>다운로드된 파일의 압축을 풀고, <span style="color:orangered"> <strong>폴더 안의 내용물을 전부 복사</strong></span>해서 Clone 했던 내 github.io 블로그 Repository 폴더 <span style="color:orangered"> <strong><code class="language-plaintext highlighter-rouge">깃허브아이디.github.io</code> 위치에 전부 붙여넣기</strong></span>한다.</p>
+
+<p><br></p>
+
+<blockquote>
+  <p><strong>🚨 Warning: 내용물 복사 시, 주의사항!</strong></p>
+
+  <ul>
+    <li>압축을 푼 <strong>폴더 자체를 복사 붙여넣기 하는 것이 아닌,</strong> 폴더 안의 테마 내용물들만 전부 복사하여 붙여넣어야 한다.</li>
   </ul>
+</blockquote>
+
+<p><br></p>
+
+<h2 id="2-3-github-pages-server와-연결하기">2-3. Github Pages Server와 연결하기</h2>
+
+<p>아까 <code class="language-plaintext highlighter-rouge">cd</code> 명령어로 <code class="language-plaintext highlighter-rouge">astonkim.github.io</code> 폴더 안으로 들어가있던 Terminal을 다시 띄우고, 다음 명령어를 차례대로 실행하자.</p>
+
+<p><span style="color:orangered"> <strong>git add -&gt; git commit -&gt; git push</strong></span></p>
+
+<p>아래의 <strong><code class="language-plaintext highlighter-rouge">git add .</code></strong> 명령어는 git에서 <strong>commit을 하기 위해 stage에 추가하는 명령어</strong> 중 하나로, 특정 파일 한 개가 아닌, <code class="language-plaintext highlighter-rouge">.</code> 은 전체 파일을 전부 추가하라는 명령어이다.</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git add <span class="nb">.</span>
+</code></pre></div></div>
+
+<p><br></p>
+
+<p><strong>📙 NOTE: 특정 파일 한 개만 git add 하는 명령어</strong></p>
+
+<blockquote>
+  <p>아래의 명령어는 hello_world라는 text 파일 하나만 add 해주는 명령어이다.</p>
+  <div class="language-sh highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git add hello_world.txt
+</code></pre></div>  </div>
+  <p>아래의 명령어는 git 상태를 보기 위한 상태 메세지 명령어이다.</p>
+  <div class="language-sh highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git status
+</code></pre></div>  </div>
+</blockquote>
+
+<p>&lt;/br&gt;</p>
+
+<p>아래의 <strong><code class="language-plaintext highlighter-rouge">git commit -m '커밋메시지'</code></strong> 명령어는 <strong>git에서 현재 버전에 대한 내용과 함께 commit하는 명령어</strong>이다.</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git commit <span class="nt">-m</span> <span class="s1">'Add YAT theme files'</span>
+</code></pre></div></div>
+
+<p><br></p>
+
+<p><strong>📙 NOTE: commit 메세지 작성 Rules</strong></p>
+
+<blockquote>
+  <p>commit 메시지는 현재 버전에 대한 내용을 명확하게 작성해야하며, 어느정도 사람들끼리 정해놓은 메세지 작성법이 있다.</p>
+
+  <p>👉 <a href="https://meetup.toast.com/posts/106">https://meetup.toast.com/posts/106</a></p>
+</blockquote>
+
+<p>&lt;/br&gt;</p>
+
+<p>아래의 <strong><code class="language-plaintext highlighter-rouge">git push</code></strong> 명령어는 git에 현재 폴더를 그대로 업로드 하는 것이 아니라, <strong>지금까지의 이력/버전(commit)을 <code class="language-plaintext highlighter-rouge">push</code> 하는 것!</strong></p>
+
+<p>working directory, staging area의 변경 사항들은 원격저장소로 <code class="language-plaintext highlighter-rouge">push</code> 되지 않기 때문에 <strong><code class="language-plaintext highlighter-rouge">push</code> 전에 <code class="language-plaintext highlighter-rouge">git status</code> , <code class="language-plaintext highlighter-rouge">git log</code> 를 통해서 확인하는 습관</strong>을 가져야한다.</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git push
+</code></pre></div></div>
+
+<p><br></p>
+
+<p>드디어 <a href="[https://%EA%B9%83%ED%97%88%EB%B8%8C%EC%95%84%EC%9D%B4%EB%94%94.github.io]">https://깃허브아이디.github.io</a> 에 접속하면, 테마가 적용된 본인의 블로그를 확인 할 수 있게 된다.</p>
+
+
+    </div>
+
+</article>
+<div class="post-nav">
+<a class="previous" href="/github/2023/09/21/github-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0-1.html" title="Github.io 블로그 만들기 - 1">Github.io 블로그 만들기 - 1</a><span></span>
+</div>
+<div class="post-related">
+      <div>Related Articles</div>
+      <ul>
+        <li class="top-post">
+          <a class="post-link" href="/github/2023/09/21/github-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0-1.html" title="Github.io 블로그 만들기 - 1">
+            Github.io 블로그 만들기 - 1<span class="post-badges">
+  <span class="post-badge badge-top">TOP</span>
+  <span class="post-badge badge-new">NEW</span>
+</span>
+</a>
+        </li>
+<li class="top-post">
+          <a class="post-link" href="/github/2023/09/22/github-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0-2.html" title="Github.io 블로그 만들기 - 2">
+            Github.io 블로그 만들기 - 2<span class="post-badges">
+  <span class="post-badge badge-top">TOP</span>
+  <span class="post-badge badge-new">NEW</span>
+</span>
+</a>
+        </li>
+<li class="top-post">
+          <a class="post-link" href="/aston_kim/2023/09/20/welcome-to-my-devlog.html" title="Opening my devlog! 🎉">
+            Opening my devlog! 🎉<span class="post-badges">
+  <span class="post-badge badge-top">TOP</span>
+  <span class="post-badge badge-new">NEW</span>
+</span>
+</a>
+        </li>
+</ul>
+    </div>
+<div class="post-comments"></div></section>
 </div>
 
 
   </section>
   <section class="sidebar" style="margin-left: 15px;">
-    <!-- Get sidebar items -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="common-list">
-  <ul>
-    <li>
-      <a href="/index.html" style="font-family: 'Chakra Petch'; font-weight: bold;">
-        Look ALL<span>3</span>
-      </a>
-    </li>
-
-    
-      <li>
-        <a href="/tags.html#h-github_%EB%B8%94%EB%A1%9C%EA%B7%B8" style="font-family: 'Chakra Petch'; font-weight: medium;">
-          github_블로그 <span>3</span>
-        </a>
-      </li>
-    
-  </ul>
-</div>
-</section>
+    <!-- Get sidebar items --></section>
 </div>
 
       </div>
