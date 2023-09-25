@@ -910,6 +910,7 @@ html[data-scroll-status=down] .framework .sidebar {
 }
 .page-segments li a.post-link {
   margin-left: 5px;
+  text-decoration: none;
 }
 .page-segments li a:hover {
   color: #000;
