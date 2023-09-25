@@ -1223,6 +1223,7 @@ html[data-theme=dark] a:visited .post-badges .post-badge.badge-new {
   display: flex;
   padding: 2px 8px;
   color: #040405;
+  text-decoration: none;
 }
 .post-menu .post-menu-content ul a * {
   pointer-events: none;
