@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-09-26T15:49:39+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">DS/ML Devlog</title><subtitle>공부한 내용들을 잊지 않게 기록하고 공유하고자 끄적이는 Devlog 입니다. 주로 Data와 Machine Learning, Deep Learning에 대해 다룹니다.</subtitle><author><name>Aston Kim</name></author><entry><title type="html">데이터사이언스 개론 Study Note - 1</title><link href="http://localhost:4000/dgu/bachelor/of/data/science/2023/09/26/data-preprocessing.html" rel="alternate" type="text/html" title="데이터사이언스 개론 Study Note - 1" /><published>2023-09-26T00:00:00+09:00</published><updated>2023-09-26T00:00:00+09:00</updated><id>http://localhost:4000/dgu/bachelor/of/data/science/2023/09/26/data-preprocessing</id><content type="html" xml:base="http://localhost:4000/dgu/bachelor/of/data/science/2023/09/26/data-preprocessing.html"><![CDATA[<h2 id="data-mining-process">Data Mining Process</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-09-26T16:16:53+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">DS/ML Devlog</title><subtitle>공부한 내용들을 잊지 않게 기록하고 공유하고자 끄적이는 Devlog 입니다. 주로 Data와 Machine Learning, Deep Learning에 대해 다룹니다.</subtitle><author><name>Aston Kim</name></author><entry><title type="html">데이터사이언스 개론 Study Note - 1</title><link href="http://localhost:4000/dgu/bachelor/of/data/science/2023/09/26/data-preprocessing.html" rel="alternate" type="text/html" title="데이터사이언스 개론 Study Note - 1" /><published>2023-09-26T00:00:00+09:00</published><updated>2023-09-26T00:00:00+09:00</updated><id>http://localhost:4000/dgu/bachelor/of/data/science/2023/09/26/data-preprocessing</id><content type="html" xml:base="http://localhost:4000/dgu/bachelor/of/data/science/2023/09/26/data-preprocessing.html"><![CDATA[<h2 id="data-mining-process">Data Mining Process</h2>
 <h2 id="pipeline">Pipeline</h2>
 
 <ul>
@@ -133,7 +133,7 @@ e.g. instrument faulty(기록하는 장치가 잘못된 경우), human or comput
     <p><strong>Missing Completely at Random (MCAR)</strong></p>
 
     <ul>
-      <li>Missingness is independent of attributes and occurs entirely at random: $P(Y\vert M) = P(Y)$</li>
+      <li>Missingness is independent of attributes and occurs entirely at random: $ P(Y \vert M) = P(Y) $</li>
       <li>Unrealistically strong assumption in practice</li>
     </ul>
   </li>
@@ -146,7 +146,7 @@ e.g. instrument faulty(기록하는 장치가 잘못된 경우), human or comput
     <p><strong>Missing at Random (MAR)</strong></p>
 
     <ul>
-      <li>Missingness is related to other attributes (missing이 될지 말지가 다른 변수들에 의해 영향을 받는다) : $P(Y\vert X, M) = P(Y\vert X)$</li>
+      <li>Missingness is related to other attributes (missing이 될지 말지가 다른 변수들에 의해 영향을 받는다) : $ P(Y\vert X, M) = P(Y\vert X) $</li>
       <li>e.g. 설문조사에서 25세 미만인 사람들의 연봉 칸이 대체로 비어있다. -&gt; 25세 미만은 학생이기 때문에 직업이 없어 연봉이 없을 가능성이 높다. (상관관계)</li>
       <li>The missingness can be explained by the variables that are actually observed</li>
       <li>e.g. Missing data on hobbies tend to be more common among individuals with higher incomes</li>
@@ -161,7 +161,7 @@ e.g. instrument faulty(기록하는 장치가 잘못된 경우), human or comput
     <p><strong>Missing Not at Random (MNAR)</strong></p>
 
     <ul>
-      <li>Missingness is related to unobserved measurements (related to the reason it’s missing) : $P(Y\vert X, M) ≠ P(Y\vert X)$</li>
+      <li>Missingness is related to unobserved measurements (related to the reason it’s missing) : $ P(Y\vert X, M) ≠ P(Y\vert X) $</li>
       <li>Informative or non-ignorable missingness</li>
       <li>e.g. Missing values in education level can imply lower education levels</li>
       <li>missing된 것이 어떠한 변수에 의한 즉, 원인이 있는데 그 원인이 되는 변수가 데이터에 기록이 되지 않아 파악이 어려운 경우.</li>
