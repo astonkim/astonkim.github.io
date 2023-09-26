@@ -222,9 +222,7 @@ e.g. instrument faulty(기록하는 장치가 잘못된 경우), human or comput
 	- The larger the $x^2$ value, the more likely the variables are related
 	- The cells that contribute the most to the $x^2$ value are those whose actual count is very different from the expected count
 
-$$
-x^2=\sum{(observed-Expected)^2\over Expected}
-$$
+$x^2=\sum{(observed-Expected)^2\over Expected}$
 
 - [**Correlation does not imply causality. 상관관계는 인과관계를 함축하지 않는다.**](https://ko.wikipedia.org/wiki/%EC%83%81%EA%B4%80%EA%B4%80%EA%B3%84%EC%99%80_%EC%9D%B8%EA%B3%BC%EA%B4%80%EA%B3%84)
 	- number of hospitals and number of car-theft in a city are correlated
@@ -239,7 +237,7 @@ $$
 | Sum(col.)                |        300 |           1200 |      1500 |  
 
 $$
-x^2 = {(250-90)^2 \over 90} + {(50-210)^2\over 210} + {(200-360)^2 \over 360} + {(1000-840)^2 \over 840} = 507.93
+x^2={(250-90)^2\over 90}+{(50-210)^2\over 210}+{(200-360)^2\over 360}+{(1000-840)^2\over 840}=507.93
 $$
 
 - 첫 번째 변수(: 체스를 할 수 있는지 없는지)와 두 번째 변수(: SF를 좋아하는지 좋아하지 않는지)의 상관관계
