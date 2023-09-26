@@ -218,7 +218,6 @@ MathJax.Hub.Register.MessageHook("TeX Jax - parse error",function (message) {
     alert("Math Processing Error: "+message[1]);
 });
 </script>
-
 <script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
   
@@ -953,26 +952,22 @@ function googleTranslateElementInit() {
 
 <h2 id="major-tasks-in-data-preprocessing">Major Tasks in Data Preprocessing</h2>
 
-<h3 id="data-cleaning">Data cleaning</h3>
-
+<h4 id="data-cleaning">Data cleaning</h4>
 <ul>
   <li>Fill in missing values, smooth noisy data, identify or remove outliers, and resolve inconsistencies (변수가 누락되어 있는 경우와 잘못 기록된 경우는 어떻게 처리하는지)</li>
 </ul>
 
-<h3 id="data-integration">Data integration</h3>
-
+<h4 id="data-integration">Data integration</h4>
 <ul>
   <li>Integration of multiple databases, data cubes, or files (여러 데이터를 합칠 때, 일관성을 해치지 않는 방법)</li>
 </ul>
 
-<h3 id="data-reduction">Data reduction</h3>
-
+<h4 id="data-reduction">Data reduction</h4>
 <ul>
   <li>Dimensionality reduction, Data compression (데이터가 너무 클 경우 어떻게 줄이는가)</li>
 </ul>
 
-<h3 id="data-transformation">Data transformation</h3>
-
+<h4 id="data-transformation">Data transformation</h4>
 <ul>
   <li>Discretization, Normalization (데이터를 어떻게 변형시키는가)</li>
 </ul>
@@ -1107,7 +1102,7 @@ e.g. instrument faulty(기록하는 장치가 잘못된 경우), human or comput
     <p><strong>Missing Not at Random (MNAR)</strong></p>
 
     <ul>
-      <li>Missingness is related to unobserved measurements (related to the reason it’s missing) : $P(Y\vert X, M)\enq P(Y\vert X)$</li>
+      <li>Missingness is related to unobserved measurements (related to the reason it’s missing) : $P(Y\vert X, M)\neq P(Y\vert X)$</li>
       <li>Informative or non-ignorable missingness</li>
       <li>e.g. Missing values in education level can imply lower education levels</li>
       <li>missing된 것이 어떠한 변수에 의한 즉, 원인이 있는데 그 원인이 되는 변수가 데이터에 기록이 되지 않아 파악이 어려운 경우.</li>
@@ -1317,10 +1312,16 @@ e.g. instrument faulty(기록하는 장치가 잘못된 경우), human or comput
     <ul>
       <li><strong>두 개의 변수가 있을 때, 그 변수의 예측값과 실측값들의 분포를 비교해서 얼마나 두 개의 다른 categorical variable이 서로 관련이 있는지를 본다.</strong></li>
       <li>The larger the $x^2$ value, the more likely the variables are related</li>
-      <li>The cells that contribute the most to the $x^2$ value are those whose actual count is very different from the expected count
-$$x^2 = \sum{(observed - Expected)^2\over Expected}$$</li>
+      <li>The cells that contribute the most to the $x^2$ value are those whose actual count is very different from the expected count</li>
     </ul>
   </li>
+</ul>
+
+<p>$$
+x^2=\sum{(observed-Expected)^2\over Expected}
+$$</p>
+
+<ul>
   <li>
 <a href="https://ko.wikipedia.org/wiki/%EC%83%81%EA%B4%80%EA%B4%80%EA%B3%84%EC%99%80_%EC%9D%B8%EA%B3%BC%EA%B4%80%EA%B3%84"><strong>Correlation does not imply causality. 상관관계는 인과관계를 함축하지 않는다.</strong></a>
     <ul>
@@ -1363,7 +1364,10 @@ $$x^2 = \sum{(observed - Expected)^2\over Expected}$$</li>
   </tbody>
 </table>
 
-<p>$$x^2 = {(250-90)^2 \over 90} + {(50-210)^2\over 210} + {(200-360)^2 \over 360} + {(1000-840)^2 \over 840} = 507.93$$</p>
+<p>$$
+x^2 = {(250-90)^2 \over 90} + {(50-210)^2\over 210} + {(200-360)^2 \over 360} + {(1000-840)^2 \over 840} = 507.93
+$$</p>
+
 <ul>
   <li>첫 번째 변수(: 체스를 할 수 있는지 없는지)와 두 번째 변수(: SF를 좋아하는지 좋아하지 않는지)의 상관관계</li>
   <li>$x^2$ (chi-squared) calculation (numbers in parenthesis are expected counts calculated based on the data distribution in the two categories)</li>
@@ -1373,9 +1377,12 @@ $$x^2 = \sum{(observed - Expected)^2\over Expected}$$</li>
 
 <ul>
   <li>Chi-square는 자유도 k(Degree of freedom)에 따라 달라진다.</li>
-  <li>It shows that like_science_fiction and play_chess are correlated in the group
-$$p(x^2&gt;507.93) \approx 0$$</li>
+  <li>It shows that like_science_fiction and play_chess are correlated in the group</li>
 </ul>
+
+<p>$$
+p(x^2&gt;507.93) \approx 0
+$$</p>
 
 <h4 id="correlation-analysis-numeric-data">Correlation Analysis (Numeric Data)</h4>
 
@@ -1385,10 +1392,16 @@ $$p(x^2&gt;507.93) \approx 0$$</li>
       <li>$n$ = the number of tuples (데이터의 개수),</li>
       <li>$\bar A$ and $\bar B$  = the respective means of $A$ and $B$ ($A$와 $B$의 평균)</li>
       <li>$\sigma_A$ and $\sigma_B$ = the respective standard deviation of $A$ and $B$ ($A$와 $B$의 표준편차)</li>
-      <li>$\sum(a_ib_i)$ = the sum of the $AB$ cross-product.
-$$r_{A,B} = \frac {\sum_{i=1}^{n}(a_i - \bar A)(b_i - \bar B)}{(n-1)\sigma_A\sigma_B} = \frac {\sum_{i=1}^{n}(a_ib_i) - n\bar A\bar B}{(n-1)\sigma_A\sigma_B}$$</li>
+      <li>$\sum(a_ib_i)$ = the sum of the $AB$ cross-product.</li>
     </ul>
   </li>
+</ul>
+
+<p>$$
+r_{A,B} = \frac{\sum_{i=1}^{n}(a_i - \bar A)(b_i - \bar B)}{(n-1)\sigma_A \sigma_B} = \frac{\sum_{i=1}^{n}(a_ib_i) - n\bar A\bar B}{(n-1)\sigma_A \sigma_B}
+$$</p>
+
+<ul>
   <li>If $r_{A,B} &gt; 0$, $A$ and $B$ are positively correlated ($A$’s values increase as $B$’s). The higher, the stronger correlation.</li>
   <li>$r_{A,B} = 0$: independent (독립)</li>
   <li>$r_{A,B} &lt; 0$: negatively correlated</li>
@@ -1402,9 +1415,17 @@ $$r_{A,B} = \frac {\sum_{i=1}^{n}(a_i - \bar A)(b_i - \bar B)}{(n-1)\sigma_A\sig
 
 <ul>
   <li>Covariance is similar to correlation
-$$Cov(A,B) = E((A - \bar A)(B - \bar B)) = \frac {\sum_{i=1}^{n}(a_i-\bar A)(b_i - \bar B)}{n}$$
-$$Cov(A,B) = E(A \cdot B) - \bar A \bar B
-\qquad r_{A,B} = \frac{Cov(A, B)}{\sigma_A \sigma_B}$$</li>
+$$
+Cov(A,B) = E((A - \bar A)(B - \bar B)) = \frac {\sum_{i=1}^{n}(a_i-\bar A)(b_i - \bar B)}{n}
+$$</li>
+</ul>
+
+<p>$$
+Cov(A,B) = E(A \cdot B) - \bar A \bar B
+\qquad r_{A,B} = \frac{Cov(A, B)}{\sigma_A \sigma_B}
+$$</p>
+
+<ul>
   <li>
 <strong>Positive covariance</strong>: If $Cov(A,B) &gt; 0$, then $A$ and $B$ both tend to be larger than their expected values.</li>
   <li>
@@ -1583,20 +1604,30 @@ $$Cov(A,B) = E(A \cdot B) - \bar A \bar B
 <strong>Min-max normalization</strong>: to $newmin_A$, $newmax_A$
     <ul>
       <li>Ex. Let income range 12,000 to 98,000 normalized to $[0.0, 1.0]$</li>
-      <li>The 73,000 is mapped to $\frac{73600−12000}{98000-12000} (1 − 0) + 0 = 0.716$
-$$v\prime = \frac {v-min_A}{max_A - min_A} (newmax_A - newmin_A) + newmin_A$$</li>
+      <li>The 73,000 is mapped to $\frac{73600−12000}{98000-12000} (1 − 0) + 0 = 0.716$</li>
     </ul>
   </li>
+</ul>
+
+<p>$$
+v\prime = \frac {v-min_A}{max_A - min_A} (newmax_A - newmin_A) + newmin_A
+$$</p>
+
+<ul>
   <li>$v$ 라는 값에 내가 가진 attribute의 가장 작은 $min$ 값을 빼주고, $max - min$으로 나누어 주면 모든 값이 0~1 사이로 가게 된다. 모든 값들을 가장 큰 값을 1로 두고, 가장 작은 값을 0으로 두고, 그것을 linear하게 꾸미는 형태가 normalization 정규화이다.</li>
   <li>
 <strong>Z-score normalization</strong> ($\mu$: mean, $\sigma$: standard deviation):
     <ul>
-      <li>Ex. Let $\mu=54,000$ , $\sigma=16,000$ . Then, $\frac{73600-54000}{16000}=1.225$
-$$v\prime = \frac{v - \mu_A}{\sigma_A}$$
-=&gt; ex. 표준점수 (표준편차로 변환해서 내가 평균보다 얼마나 많이 앞서있는지($\sigma$) 알아본다)</li>
+      <li>Ex. Let $\mu=54,000$ , $\sigma=16,000$ . Then, $\frac{73600-54000}{16000}=1.225$</li>
     </ul>
   </li>
 </ul>
+
+<p>$$
+v\prime = \frac{v - \mu_A}{\sigma_A}
+$$</p>
+
+<p>=&gt; ex. 표준점수 (표준편차로 변환해서 내가 평균보다 얼마나 많이 앞서있는지($\sigma$) 알아본다)</p>
 
 <h3 id="discretization">Discretization</h3>
 
@@ -1796,14 +1827,6 @@ $$v\prime = \frac{v - \mu_A}{\sigma_A}$$
       <div>Related Articles</div>
       <ul>
         <li class="top-post">
-          <a class="post-link" href="/github/2023/09/25/yat-theme.html" title="Github.io 블로그 만들기 - 3">
-            Github.io 블로그 만들기 - 3<span class="post-badges">
-  <span class="post-badge badge-top">TOP</span>
-  <span class="post-badge badge-new">NEW</span>
-</span>
-</a>
-        </li>
-<li class="top-post">
           <a class="post-link" href="/github/2023/09/21/github-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0-1.html" title="Github.io 블로그 만들기 - 1">
             Github.io 블로그 만들기 - 1<span class="post-badges">
   <span class="post-badge badge-top">TOP</span>
@@ -1812,8 +1835,8 @@ $$v\prime = \frac{v - \mu_A}{\sigma_A}$$
 </a>
         </li>
 <li class="top-post">
-          <a class="post-link" href="/aston_kim/2023/09/20/welcome-to-my-devlog.html" title="Opening my devlog! 🎉">
-            Opening my devlog! 🎉<span class="post-badges">
+          <a class="post-link" href="/github/2023/09/22/github-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0-2.html" title="Github.io 블로그 만들기 - 2">
+            Github.io 블로그 만들기 - 2<span class="post-badges">
   <span class="post-badge badge-top">TOP</span>
   <span class="post-badge badge-new">NEW</span>
 </span>
@@ -1822,6 +1845,14 @@ $$v\prime = \frac{v - \mu_A}{\sigma_A}$$
 <li class="">
           <a class="post-link" href="/dgu/bachelor/of/data/science/2023/09/26/data-preprocessing.html" title="데이터사이언스 개론 Study Note - 1">
             데이터사이언스 개론 Study Note - 1<span class="post-badges">
+  <span class="post-badge badge-top">TOP</span>
+  <span class="post-badge badge-new">NEW</span>
+</span>
+</a>
+        </li>
+<li class="top-post">
+          <a class="post-link" href="/aston_kim/2023/09/20/welcome-to-my-devlog.html" title="Opening my devlog! 🎉">
+            Opening my devlog! 🎉<span class="post-badges">
   <span class="post-badge badge-top">TOP</span>
   <span class="post-badge badge-new">NEW</span>
 </span>

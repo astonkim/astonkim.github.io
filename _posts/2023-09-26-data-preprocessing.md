@@ -22,20 +22,16 @@ use_math: true
 
 ## Major Tasks in Data Preprocessing
 
-### Data cleaning  
-
+#### Data cleaning  
 - Fill in missing values, smooth noisy data, identify or remove outliers, and resolve inconsistencies (변수가 누락되어 있는 경우와 잘못 기록된 경우는 어떻게 처리하는지)
 
-### Data integration
-
+#### Data integration
 - Integration of multiple databases, data cubes, or files (여러 데이터를 합칠 때, 일관성을 해치지 않는 방법)
 
-### Data reduction
-
+#### Data reduction
 - Dimensionality reduction, Data compression (데이터가 너무 클 경우 어떻게 줄이는가)
 
-### Data transformation
-
+#### Data transformation
 - Discretization, Normalization (데이터를 어떻게 변형시키는가)
 
 <br/>
@@ -58,7 +54,6 @@ use_math: true
 
 : Lots of potentially incorrect data, 
 e.g. instrument faulty(기록하는 장치가 잘못된 경우), human or computer error(인간 또는 컴퓨터 오류), transmission err(전송 오류)
-
 
 - **Incomplete**: lacking attribute values, lacking certain attributes of interest, or containing only aggregate data.  
 (데이터들 사이에 missing value가 존재)
@@ -228,7 +223,7 @@ e.g. instrument faulty(기록하는 장치가 잘못된 경우), human or comput
 	- The cells that contribute the most to the $x^2$ value are those whose actual count is very different from the expected count
 
 $$
-x^2 = \sum{(observed - Expected)^2\over Expected}
+x^2=\sum{(observed-Expected)^2\over Expected}
 $$
 
 - [**Correlation does not imply causality. 상관관계는 인과관계를 함축하지 않는다.**](https://ko.wikipedia.org/wiki/%EC%83%81%EA%B4%80%EA%B4%80%EA%B3%84%EC%99%80_%EC%9D%B8%EA%B3%BC%EA%B4%80%EA%B3%84)
