@@ -100,14 +100,14 @@ e.g. instrument faulty(기록하는 장치가 잘못된 경우), human or comput
 
 - **Missing Completely at Random (MCAR)**
 
-	- Missingness is independent of attributes and occurs entirely at random: $P(Y\vert M) = P(Y)$
+	- Missingness is independent of attributes and occurs entirely at random: $$P(Y\vert M) = P(Y)$$
 	- Unrealistically strong assumption in practice
 
 <br/>
 
 - **Missing at Random (MAR)**
 
-	- Missingness is related to other attributes (missing이 될지 말지가 다른 변수들에 의해 영향을 받는다) : $P(Y\vert X, M) = P(Y\vert X)$
+	- Missingness is related to other attributes (missing이 될지 말지가 다른 변수들에 의해 영향을 받는다) : $$P(Y\vert X, M) = P(Y\vert X)$$
 	- e.g. 설문조사에서 25세 미만인 사람들의 연봉 칸이 대체로 비어있다. -> 25세 미만은 학생이기 때문에 직업이 없어 연봉이 없을 가능성이 높다. (상관관계)
 	- The missingness can be explained by the variables that are actually observed
 	- e.g. Missing data on hobbies tend to be more common among individuals with higher incomes
@@ -116,7 +116,7 @@ e.g. instrument faulty(기록하는 장치가 잘못된 경우), human or comput
 
 - **Missing Not at Random (MNAR)**
 
-	- Missingness is related to unobserved measurements (related to the reason it's missing) : $P(Y\vert X, M) ≠ P(Y\vert X)$
+	- Missingness is related to unobserved measurements (related to the reason it's missing) : $$P(Y\vert X, M) ≠ P(Y\vert X)$$
 	- Informative or non-ignorable missingness
 	- e.g. Missing values in education level can imply lower education levels
 	- missing된 것이 어떠한 변수에 의한 즉, 원인이 있는데 그 원인이 되는 변수가 데이터에 기록이 되지 않아 파악이 어려운 경우.
@@ -221,13 +221,12 @@ e.g. instrument faulty(기록하는 장치가 잘못된 경우), human or comput
 
 #### Correlation Analysis (Nominal Data)
 
-- **$x^2$ (chi-square) test**
+- **$$x^2$$ (chi-square) test**
 	- **두 개의 변수가 있을 때, 그 변수의 예측값과 실측값들의 분포를 비교해서 얼마나 두 개의 다른 categorical variable이 서로 관련이 있는지를 본다.**
-	- The larger the $x^2$ value, the more likely the variables are related
-	- The cells that contribute the most to the $x^2$ value are those whose actual count is very different from the expected count
-$$
-x^2 = \sum{(observed - Expected)^2\over Expected}
-$$
+	- The larger the $$x^2$$ value, the more likely the variables are related
+	- The cells that contribute the most to the $$x^2$$ value are those whose actual count is very different from the expected count
+$$x^2 = \sum{(observed - Expected)^2\over Expected}$$
+
 - [**Correlation does not imply causality. 상관관계는 인과관계를 함축하지 않는다.**](https://ko.wikipedia.org/wiki/%EC%83%81%EA%B4%80%EA%B4%80%EA%B3%84%EC%99%80_%EC%9D%B8%EA%B3%BC%EA%B4%80%EA%B3%84)
 	- number of hospitals and number of car-theft in a city are correlated
 	- Both are causally linked to the third variable: population
