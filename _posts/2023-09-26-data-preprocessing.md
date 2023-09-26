@@ -221,8 +221,7 @@ e.g. instrument faulty(기록하는 장치가 잘못된 경우), human or comput
 	- **두 개의 변수가 있을 때, 그 변수의 예측값과 실측값들의 분포를 비교해서 얼마나 두 개의 다른 categorical variable이 서로 관련이 있는지를 본다.**
 	- The larger the $x^2$ value, the more likely the variables are related
 	- The cells that contribute the most to the $x^2$ value are those whose actual count is very different from the expected count
-
-$x^2=\sum{(observed-Expected)^2\over Expected}$
+	- $x^2=\sum{(observed-Expected)^2\over Expected}$
 
 - [**Correlation does not imply causality. 상관관계는 인과관계를 함축하지 않는다.**](https://ko.wikipedia.org/wiki/%EC%83%81%EA%B4%80%EA%B4%80%EA%B3%84%EC%99%80_%EC%9D%B8%EA%B3%BC%EA%B4%80%EA%B3%84)
 	- number of hospitals and number of car-theft in a city are correlated
@@ -236,9 +235,7 @@ $x^2=\sum{(observed-Expected)^2\over Expected}$
 | Not like science fiction |    50(210) |      1000(840) |      1050 |
 | Sum(col.)                |        300 |           1200 |      1500 |  
 
-$$
-x^2={(250-90)^2\over 90}+{(50-210)^2\over 210}+{(200-360)^2\over 360}+{(1000-840)^2\over 840}=507.93
-$$
+$x^2={(250-90)^2\over 90}+{(50-210)^2\over 210}+{(200-360)^2\over 360}+{(1000-840)^2\over 840}=507.93$
 
 - 첫 번째 변수(: 체스를 할 수 있는지 없는지)와 두 번째 변수(: SF를 좋아하는지 좋아하지 않는지)의 상관관계
 - $x^2$ (chi-squared) calculation (numbers in parenthesis are expected counts calculated based on the data distribution in the two categories)
@@ -247,23 +244,16 @@ $$
 
 - Chi-square는 자유도 k(Degree of freedom)에 따라 달라진다.
 - It shows that like_science_fiction and play_chess are correlated in the group
-
-$$
-p(x^2>507.93) \approx 0
-$$
+- $p(x^2>507.93) \approx 0$
 
 #### Correlation Analysis (Numeric Data)
 
 - Correlation coefficient (also called **Pearson’s product moment coefficient**)
+- $r_{A,B} = \frac{\sum_{i=1}^{n}(a_i - \bar A)(b_i - \bar B)}{(n-1)\sigma_A \sigma_B} = \frac{\sum_{i=1}^{n}(a_ib_i) - n\bar A\bar B}{(n-1)\sigma_A \sigma_B}$
 	- $n$ = the number of tuples (데이터의 개수), 
 	- $\bar A$ and $\bar B$  = the respective means of $A$ and $B$ ($A$와 $B$의 평균)
 	- $\sigma_A$ and $\sigma_B$ = the respective standard deviation of $A$ and $B$ ($A$와 $B$의 표준편차)
 	- $\sum(a_ib_i)$ = the sum of the $AB$ cross-product.
-
-$$
-r_{A,B} = \frac{\sum_{i=1}^{n}(a_i - \bar A)(b_i - \bar B)}{(n-1)\sigma_A \sigma_B} = \frac{\sum_{i=1}^{n}(a_ib_i) - n\bar A\bar B}{(n-1)\sigma_A \sigma_B}
-$$
-
 - If $r_{A,B} > 0$, $A$ and $B$ are positively correlated ($A$’s values increase as $B$’s). The higher, the stronger correlation.
 - $r_{A,B} = 0$: independent (독립)
 - $r_{A,B} < 0$: negatively correlated
@@ -275,14 +265,8 @@ $$
 #### Covariance (Numeric Data)
 
 - Covariance is similar to correlation
-$$
-Cov(A,B) = E((A - \bar A)(B - \bar B)) = \frac {\sum_{i=1}^{n}(a_i-\bar A)(b_i - \bar B)}{n}
-$$
-
-$$
-Cov(A,B) = E(A \cdot B) - \bar A \bar B
-\qquad r_{A,B} = \frac{Cov(A, B)}{\sigma_A \sigma_B}
-$$
+- $Cov(A,B) = E((A - \bar A)(B - \bar B)) = \frac {\sum_{i=1}^{n}(a_i-\bar A)(b_i - \bar B)}{n}$
+- $Cov(A,B) = E(A \cdot B) - \bar A \bar B \qquad r_{A,B} = \frac{Cov(A, B)}{\sigma_A \sigma_B}$
 
 - **Positive covariance**: If $Cov(A,B) > 0$, then $A$ and $B$ both tend to be larger than their expected values.
 - **Negative covariance**: If $Cov(A,B) < 0$ then if $A$ is larger than its expected value, $B$ is likely to be smaller than its expected value.
@@ -375,20 +359,13 @@ $$
 ### Normalization
 
 - **Min-max normalization**: to $newmin_A$, $newmax_A$
+	- $v\prime = \frac {v-min_A}{max_A - min_A} (newmax_A - newmin_A) + newmin_A$
+		- $v$ 라는 값에 내가 가진 attribute의 가장 작은 $min$ 값을 빼주고, $max - min$으로 나누어 주면 모든 값이 0~1 사이로 가게 된다. 모든 값들을 가장 큰 값을 1로 두고, 가장 작은 값을 0으로 두고, 그것을 linear하게 꾸미는 형태가 normalization 정규화이다.
 	- Ex. Let income range 12,000 to 98,000 normalized to $[0.0, 1.0]$
 	- The 73,000 is mapped to $\frac{73600−12000}{98000-12000} (1 − 0) + 0 = 0.716$
-
-$$
-v\prime = \frac {v-min_A}{max_A - min_A} (newmax_A - newmin_A) + newmin_A
-$$
-
-- $v$ 라는 값에 내가 가진 attribute의 가장 작은 $min$ 값을 빼주고, $max - min$으로 나누어 주면 모든 값이 0~1 사이로 가게 된다. 모든 값들을 가장 큰 값을 1로 두고, 가장 작은 값을 0으로 두고, 그것을 linear하게 꾸미는 형태가 normalization 정규화이다.
 - **Z-score normalization** ($\mu$: mean, $\sigma$: standard deviation):
+	- $v\prime = \frac{v - \mu_A}{\sigma_A}$
 	- Ex. Let $\mu=54,000$ , $\sigma=16,000$ . Then, $\frac{73600-54000}{16000}=1.225$
-
-$$
-v\prime = \frac{v - \mu_A}{\sigma_A}
-$$
 
 => ex. 표준점수 (표준편차로 변환해서 내가 평균보다 얼마나 많이 앞서있는지($\sigma$) 알아본다)
 
