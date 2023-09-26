@@ -100,14 +100,14 @@ e.g. instrument faulty(기록하는 장치가 잘못된 경우), human or comput
 
 - **Missing Completely at Random (MCAR)**
 
-	- Missingness is independent of attributes and occurs entirely at random: $$P(Y\vert M) = P(Y)$$
+	- Missingness is independent of attributes and occurs entirely at random: $$ P(Y\vert M) = P(Y) $$
 	- Unrealistically strong assumption in practice
 
 <br/>
 
 - **Missing at Random (MAR)**
 
-	- Missingness is related to other attributes (missing이 될지 말지가 다른 변수들에 의해 영향을 받는다) : $$P(Y\vert X, M) = P(Y\vert X)$$
+	- Missingness is related to other attributes (missing이 될지 말지가 다른 변수들에 의해 영향을 받는다) : $$ P(Y\vert X, M) = P(Y\vert X) $$
 	- e.g. 설문조사에서 25세 미만인 사람들의 연봉 칸이 대체로 비어있다. -> 25세 미만은 학생이기 때문에 직업이 없어 연봉이 없을 가능성이 높다. (상관관계)
 	- The missingness can be explained by the variables that are actually observed
 	- e.g. Missing data on hobbies tend to be more common among individuals with higher incomes
