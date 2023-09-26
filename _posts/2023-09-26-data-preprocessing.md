@@ -4,6 +4,7 @@ title: 데이터사이언스 개론 Study Note - 1
 subtitle: 01. Data Preprocessing
 categories: DGU Bachelor of Data Science
 tags: [데이터사이언스_개론]
+use_math: true
 ---
 
 ## Data Mining Process
