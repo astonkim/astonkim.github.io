@@ -921,7 +921,7 @@ function googleTranslateElementInit() {
 
 
 
-    <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 20 mins</span>
+    <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 22 mins</span>
   </div>
 <div class="post-tags"><a class="post-tag" href="/tags.html#%EB%8D%B0%EC%9D%B4%ED%84%B0%EC%82%AC%EC%9D%B4%EC%96%B8%EC%8A%A4_%EA%B0%9C%EB%A1%A0">#데이터사이언스_개론</a></div></header>
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
@@ -932,49 +932,72 @@ function googleTranslateElementInit() {
 <h2 id="pipeline">Pipeline</h2>
 
 <ul>
-  <li>The workflow of a typical data mining application
+  <li>
+    <p>The workflow of a typical data mining application</p>
+
     <ul>
       <li>
-<strong>Data collection</strong>  (데이터 수집)</li>
+        <p><strong>Data collection</strong>  (데이터 수집)</p>
+      </li>
       <li>
-<strong>Pre-processing</strong>  (전처리: 활용을 위한 정제)</li>
+        <p><strong>Pre-processing</strong>  (전처리: 활용을 위한 정제)</p>
+      </li>
       <li>
-<strong>Analytical processing and algorithms</strong> (분석 처리와 알고리즘)</li>
+        <p><strong>Analytical processing and algorithms</strong> (분석 처리와 알고리즘)</p>
+      </li>
       <li>
-<strong>Post-processing</strong> (후처리)</li>
+        <p><strong>Post-processing</strong> (후처리)</p>
+      </li>
     </ul>
   </li>
 </ul>
 
-<p><img src="https://i.imgur.com/QOnQFUF.png" alt=""></p>
-
-<p><br></p>
+<p><img src="https://i.imgur.com/QOnQFUF.png" alt="">
+<br></p>
 
 <h2 id="major-tasks-in-data-preprocessing">Major Tasks in Data Preprocessing</h2>
 
-<h4 id="data-cleaning">Data cleaning</h4>
 <ul>
-  <li>Fill in missing values, smooth noisy data, identify or remove outliers, and resolve inconsistencies (변수가 누락되어 있는 경우와 잘못 기록된 경우는 어떻게 처리하는지)</li>
+  <li>
+    <dl>
+      <dt><strong>Data cleaning</strong></dt>
+      <dd>: Fill in missing values, smooth noisy data, identify or remove outliers, and resolve inconsistencies
+
+        <p>=&gt; 변수가 누락되어 있는 경우와 잘못 기록된 경우는 어떻게 처리하는지</p>
+      </dd>
+    </dl>
+  </li>
+  <li>
+    <dl>
+      <dt><strong>Data integration</strong></dt>
+      <dd>: Integration of multiple databases, data cubes, or files
+
+        <p>=&gt; 여러 데이터를 합칠 때, 일관성을 해치지 않는 방법</p>
+      </dd>
+    </dl>
+  </li>
+  <li>
+    <dl>
+      <dt><strong>Data reduction</strong></dt>
+      <dd>: Dimensionality reduction, Data compression
+
+        <p>=&gt; 데이터가 너무 클 경우 어떻게 줄이는가</p>
+      </dd>
+    </dl>
+  </li>
+  <li>
+    <dl>
+      <dt><strong>Data transformation</strong></dt>
+      <dd>: Discretization, Normalization
+
+        <p>=&gt; 데이터를 어떻게 변형시키는가
+<br></p>
+      </dd>
+    </dl>
+  </li>
 </ul>
 
-<h4 id="data-integration">Data integration</h4>
-<ul>
-  <li>Integration of multiple databases, data cubes, or files (여러 데이터를 합칠 때, 일관성을 해치지 않는 방법)</li>
-</ul>
-
-<h4 id="data-reduction">Data reduction</h4>
-<ul>
-  <li>Dimensionality reduction, Data compression (데이터가 너무 클 경우 어떻게 줄이는가)</li>
-</ul>
-
-<h4 id="data-transformation">Data transformation</h4>
-<ul>
-  <li>Discretization, Normalization (데이터를 어떻게 변형시키는가)</li>
-</ul>
-
-<p><br></p>
-
-<h2 id="data-cleaning-1">Data Cleaning</h2>
+<h2 id="data-cleaning">Data Cleaning</h2>
 
 <blockquote>
   <p><strong>📙 NOTE: Data Quality: Why Preprocess the Data?</strong></p>
@@ -1005,56 +1028,88 @@ e.g. instrument faulty(기록하는 장치가 잘못된 경우), human or comput
 
 <ul>
   <li>
-<strong>Incomplete</strong>: lacking attribute values, lacking certain attributes of interest, or containing only aggregate data.<br>
-(데이터들 사이에 missing value가 존재)
-    <ul>
-      <li>e.g. Occupation=“ ” (missing data)</li>
-    </ul>
+    <dl>
+      <dt><strong>Incomplete</strong></dt>
+      <dd>: lacking attribute values, lacking certain attributes of interest, or containing only aggregate data. (데이터들 사이에 missing value가 존재)
+
+        <ul>
+          <li>e.g. Occupation=“ ” (missing data)</li>
+        </ul>
+      </dd>
+    </dl>
   </li>
   <li>
-<strong>Noisy</strong>: containing noise, errors, or outliers<br>
-(데이터 중간에 섞여있는 노이즈, 에러 또는 이상치.)
-    <ul>
-      <li>e.g. Salary=“−10” (an error)</li>
-    </ul>
+    <dl>
+      <dt><strong>Noisy</strong></dt>
+      <dd>: containing noise, errors, or outliers (데이터 중간에 섞여있는 노이즈, 에러 또는 이상치.)
+
+        <ul>
+          <li>e.g. Salary=“−10” (an error)</li>
+        </ul>
+      </dd>
+    </dl>
   </li>
   <li>
-<strong>Inconsistent</strong>: containing discrepancies in codes or names<br>
-(두 feature 사이의 불일치.)
-    <ul>
-      <li>e.g. Age=“42”, Birthday=“03/07/2010”</li>
-      <li>Was rating “1, 2, 3”, now rating “A, B, C”</li>
-      <li>discrepancy between duplicate records</li>
-    </ul>
+    <dl>
+      <dt><strong>Inconsistent</strong></dt>
+      <dd>: containing discrepancies in codes or names (두 feature 사이의 불일치.)
+
+        <ul>
+          <li>e.g. Age=“42”, Birthday=“03/07/2010”</li>
+          <li>Was rating “1, 2, 3”, now rating “A, B, C”</li>
+          <li>discrepancy between duplicate records</li>
+        </ul>
+      </dd>
+    </dl>
   </li>
   <li>
-<strong>Intentional</strong>: 잘못된 일반화.
-    <ul>
-      <li>e.g. 7th of July is everyone’s birthday.</li>
-    </ul>
+    <dl>
+      <dt><strong>Intentional</strong></dt>
+      <dd>: 잘못된 일반화.
+
+        <ul>
+          <li>e.g. 7th of July is everyone’s birthday.</li>
+        </ul>
+      </dd>
+    </dl>
   </li>
 </ul>
 
-<p><strong>=&gt; 이런 것들을 적절하게 처리해서 깔끔한 데이터를 만들어야 한다.</strong></p>
+<p><strong>=&gt; 이런 것들을 적절하게 처리해서 깔끔한 데이터를 만들어야 한다.</strong>
+<br></p>
 
 <h3 id="incomplete-missing-data">Incomplete (Missing) Data</h3>
 
 <ul>
-  <li>Data is not always available
+  <li>
+    <p>Data is not always available</p>
+
+    <p>e.g. many tuples have no recorded value for several attributes, such as customer income in sales data</p>
+  </li>
+  <li>
+    <p>Missing data may be due to</p>
+
     <ul>
-      <li>e.g. many tuples have no recorded value for several attributes, such as customer income in sales data</li>
+      <li>
+        <p>equipment malfunction</p>
+      </li>
+      <li>
+        <p>inconsistent with other recorded data and thus deleted</p>
+      </li>
+      <li>
+        <p>data not entered due to misunderstanding</p>
+      </li>
+      <li>
+        <p>certain data may not be considered important at the time of entry</p>
+      </li>
+      <li>
+        <p>not register history or changes of the data</p>
+      </li>
     </ul>
   </li>
-  <li>Missing data may be due to
-    <ul>
-      <li>equipment malfunction</li>
-      <li>inconsistent with other recorded data and thus deleted</li>
-      <li>data not entered due to misunderstanding</li>
-      <li>certain data may not be considered important at the time of entry</li>
-      <li>not register history or changes of the data</li>
-    </ul>
+  <li>
+    <p>Missing data may need to be inferred</p>
   </li>
-  <li>Missing data may need to be inferred</li>
 </ul>
 
 <h4 id="assumption-for-missing-data">Assumption for Missing Data</h4>
@@ -1063,49 +1118,59 @@ e.g. instrument faulty(기록하는 장치가 잘못된 경우), human or comput
   <p><strong>📙 NOTE: Notation</strong></p>
   <ul>
     <li>Missing or Not for variable Y: M = 0 (observed), M=1 (missing)</li>
-    <li>Other observed variable X</li>
+    <li>Other observed variable X
+<br>
+</li>
   </ul>
 </blockquote>
-
-<p><br></p>
 
 <ul>
   <li>
     <p><strong>Missing Completely at Random (MCAR)</strong></p>
 
     <ul>
-      <li>Missingness is independent of attributes and occurs entirely at random: $P(Y \vert M) = P(Y)$</li>
-      <li>Unrealistically strong assumption in practice</li>
+      <li>
+        <p>Missingness is independent of attributes and occurs entirely at random: $P(Y \vert M) = P(Y)$</p>
+      </li>
+      <li>
+        <p>Unrealistically strong assumption in practice</p>
+      </li>
     </ul>
   </li>
-</ul>
-
-<p><br></p>
-
-<ul>
   <li>
     <p><strong>Missing at Random (MAR)</strong></p>
 
     <ul>
-      <li>Missingness is related to other attributes (missing이 될지 말지가 다른 변수들에 의해 영향을 받는다) : $ P(Y\vert X, M) = P(Y\vert X) $</li>
-      <li>e.g. 설문조사에서 25세 미만인 사람들의 연봉 칸이 대체로 비어있다. -&gt; 25세 미만은 학생이기 때문에 직업이 없어 연봉이 없을 가능성이 높다. (상관관계)</li>
-      <li>The missingness can be explained by the variables that are actually observed</li>
-      <li>e.g. Missing data on hobbies tend to be more common among individuals with higher incomes</li>
+      <li>
+        <p>Missingness is related to other attributes (missing이 될지 말지가 다른 변수들에 의해 영향을 받는다) : $ P(Y\vert X, M) = P(Y\vert X) $</p>
+      </li>
+      <li>
+        <p>e.g. 설문조사에서 25세 미만인 사람들의 연봉 칸이 대체로 비어있다. -&gt; 25세 미만은 학생이기 때문에 직업이 없어 연봉이 없을 가능성이 높다. (상관관계)</p>
+      </li>
+      <li>
+        <p>The missingness can be explained by the variables that are actually observed</p>
+      </li>
+      <li>
+        <p>e.g. Missing data on hobbies tend to be more common among individuals with higher incomes</p>
+      </li>
     </ul>
   </li>
-</ul>
-
-<p><br></p>
-
-<ul>
   <li>
     <p><strong>Missing Not at Random (MNAR)</strong></p>
 
     <ul>
-      <li>Missingness is related to unobserved measurements (related to the reason it’s missing) : $P(Y\vert X, M)\neq P(Y\vert X)$</li>
-      <li>Informative or non-ignorable missingness</li>
-      <li>e.g. Missing values in education level can imply lower education levels</li>
-      <li>missing된 것이 어떠한 변수에 의한 즉, 원인이 있는데 그 원인이 되는 변수가 데이터에 기록이 되지 않아 파악이 어려운 경우.</li>
+      <li>
+        <p>Missingness is related to unobserved measurements (related to the reason it’s missing) : $P(Y\vert X, M)\neq P(Y\vert X)$</p>
+      </li>
+      <li>
+        <p>Informative or non-ignorable missingness</p>
+      </li>
+      <li>
+        <p>e.g. Missing values in education level can imply lower education levels</p>
+      </li>
+      <li>
+        <p>missing된 것이 어떠한 변수에 의한 즉, 원인이 있는데 그 원인이 되는 변수가 데이터에 기록이 되지 않아 파악이 어려운 경우.</p>
+      </li>
     </ul>
   </li>
 </ul>
@@ -1117,216 +1182,360 @@ e.g. instrument faulty(기록하는 장치가 잘못된 경우), human or comput
 <ul>
   <li>y: Variable with missing values</li>
   <li>Blue: observed data</li>
-  <li>Red: missing data</li>
+  <li>Red: missing data
+<br>
+</li>
 </ul>
-
-<p><br></p>
 
 <h4 id="how-to-handle-missing-data">How to Handle Missing Data?</h4>
 
 <ul>
-  <li>Eliminate data tuples or attributes (데이터 삭제)
+  <li>
+    <p>Eliminate data tuples or attributes (데이터 삭제)</p>
+
     <ul>
-      <li>Usually done when class label is missing (when doing classification)—not effective when the % of missing values per attribute varies considerably</li>
-      <li>데이터가 너무 많은 경우에 가장 편하다.</li>
-    </ul>
-  </li>
-  <li>Fill in the missing value manually: tedious + infeasible?</li>
-  <li>Fill in it automatically with (데이터 채우기)
-    <ul>
-      <li>a global constant : e.g., “unknown”, a new class?!</li>
-      <li>the attribute mean</li>
-      <li>the attribute mean for all samples belonging to the same class: smarter</li>
-      <li><strong>the most probable value: inference-based such as Bayesian formula or decision tree</strong></li>
-    </ul>
-  </li>
-  <li>Imputation Using <strong>(Mean/Median) Values 평균</strong>
-    <ul>
-      <li>👍 Pros :
-        <ul>
-          <li>Easy &amp; Fast</li>
-          <li>Works well with small numerical datasets</li>
-        </ul>
+      <li>
+        <p>Usually done when class label is missing (when doing classification)—not effective when the % of missing values per attribute varies considerably</p>
       </li>
-      <li>👎 Cons :
-        <ul>
-          <li>단점은 딱히 없지만 성능이 그렇게 좋진 않다.</li>
-        </ul>
+      <li>
+        <p>데이터가 너무 많은 경우에 가장 편하다.</p>
       </li>
     </ul>
+  </li>
+  <li>
+    <p>Fill in the missing value manually: tedious + infeasible?</p>
+  </li>
+  <li>
+    <p>Fill in it automatically with (데이터 채우기)</p>
+
+    <ul>
+      <li>
+        <p>a global constant : e.g., “unknown”, a new class?!</p>
+      </li>
+      <li>
+        <p>the attribute mean</p>
+      </li>
+      <li>
+        <p>the attribute mean for all samples belonging to the same class: smarter</p>
+      </li>
+      <li>
+        <p><strong>the most probable value: inference-based such as Bayesian formula or decision tree</strong></p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <dl>
+      <dt>Imputation Using <strong>(Mean/Median) Values</strong>
+</dt>
+      <dd>: 평균 또는 중앙값을 이용</dd>
+    </dl>
   </li>
 </ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>👍 Pros</th>
+      <th>👎 Cons</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+<ul>
+  <li>Easy &amp; Fast</li>
+</ul>
+</td>
+      <td>
+<ul>
+  <li>단점은 딱히 없다.</li>
+</ul>
+</td>
+    </tr>
+    <tr>
+      <td>
+<ul>
+  <li>Works well with small numerical datasets</li>
+</ul>
+</td>
+      <td>
+<ul>
+  <li>굳이 따지자면 성능이 그렇게 좋진 않다.</li>
+</ul>
+</td>
+    </tr>
+  </tbody>
+</table>
 
 <p><img src="https://i.imgur.com/dIyna7L.png" alt=""></p>
 
 <ul>
-  <li>Imputation Using <strong>(Most Frequent) or (Zero/Constant) Values 가장 빈도가 많은 값 또는 0</strong>
-    <ul>
-      <li>👍 Pros :
-        <ul>
-          <li>Works well with categorical features</li>
-        </ul>
-      </li>
-      <li>👎 Cons :
-        <ul>
-          <li>큰 단점은 딱히 없다.</li>
-        </ul>
-      </li>
-    </ul>
+  <li>
+    <dl>
+      <dt>Imputation Using <strong>(Most Frequent) or (Zero/Constant) Values</strong>
+</dt>
+      <dd>: 가장 빈도가 많은 값 또는 0을 이용</dd>
+    </dl>
   </li>
 </ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>👍 Pros</th>
+      <th>👎 Cons</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+<ul>
+  <li>Works well with categorical features</li>
+</ul>
+</td>
+      <td>
+<ul>
+  <li>큰 단점은 딱히 없다.</li>
+</ul>
+</td>
+    </tr>
+  </tbody>
+</table>
 
 <p><img src="https://i.imgur.com/dZ4ezIT.png" alt=""></p>
 
 <ul>
-  <li>Imputation Using <strong>Inference-based Method (i.e., k-nn, multi-variate imputations, deep learning)</strong> 데이터의 특징들을 이용하여 예측
-    <ul>
-      <li>👍 Pros :
-        <ul>
-          <li>Can be <strong>much more accurate 가장 정확하다</strong> than the mean, median or most frequent imputation methods. (It depends on the dataset)</li>
-        </ul>
-      </li>
-      <li>👎 Cons :
-        <ul>
-          <li><strong>High computational costs with large datasets 모델을 또 하나 만들어야 하는 수고가 요구됨</strong></li>
-          <li>You have to specify the columns that contain information about the target column that will be imputed</li>
-        </ul>
-      </li>
-    </ul>
+  <li>
+    <dl>
+      <dt>Imputation Using <strong>Inference-based Method (i.e., k-nn, multi-variate imputations, deep learning)</strong>
+</dt>
+      <dd>: 데이터의 특징들을 이용하여 예측</dd>
+    </dl>
   </li>
 </ul>
 
-<p><img src="https://i.imgur.com/RSbV6Y0.png" alt=""></p>
+<table>
+  <thead>
+    <tr>
+      <th>👍 Pros</th>
+      <th>👎 Cons</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+<ul>
+  <li>Can be <strong>much more accurate 가장 정확하다</strong> than the mean, median or most frequent imputation methods. (It depends on the dataset)</li>
+</ul>
+</td>
+      <td>
+<ul>
+  <li><strong>High computational costs with large datasets 모델을 또 하나 만들어야 하는 수고가 요구됨</strong></li>
+</ul>
+</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>
+<ul>
+  <li>You have to specify the columns that contain information about the target column that will be imputed</li>
+</ul>
+</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><img src="https://i.imgur.com/RSbV6Y0.png" alt="">
+<br></p>
 
 <h3 id="noisy-data">Noisy Data</h3>
 
 <ul>
   <li>
-<strong>Noise</strong> : random error or variance in a measured variable</li>
+    <p><strong>Noise</strong> : random error or variance in a measured variable</p>
+  </li>
   <li>
-<strong>Incorrect attribute values</strong> may be due to
+    <p><strong>Incorrect attribute values</strong> may be due to</p>
+
     <ul>
-      <li>faulty data collection instruments</li>
-      <li>data entry problems</li>
-      <li>data transmission problems</li>
-      <li>technology limitation</li>
-      <li>inconsistency in naming convention</li>
+      <li>
+        <p>faulty data collection instruments</p>
+      </li>
+      <li>
+        <p>data entry problems</p>
+      </li>
+      <li>
+        <p>data transmission problems</p>
+      </li>
+      <li>
+        <p>technology limitation</p>
+      </li>
+      <li>
+        <p>inconsistency in naming convention</p>
+      </li>
     </ul>
   </li>
   <li>
-<strong>Other data problems</strong> which require data cleaning
+    <p><strong>Other data problems</strong> which require data cleaning</p>
+
     <ul>
-      <li>duplicate records</li>
-      <li>incomplete data</li>
-      <li>inconsistent data
-=&gt; <strong>Data Quality</strong>에 관한 문제!!!</li>
+      <li>
+        <p>duplicate records</p>
+      </li>
+      <li>
+        <p>incomplete data</p>
+      </li>
+      <li>
+        <p>inconsistent data</p>
+      </li>
     </ul>
   </li>
 </ul>
+
+<p>=&gt; <strong>Data Quality</strong>에 관한 문제!!!
+<br></p>
 
 <h4 id="how-to-handle-noisy-data">How to Handle Noisy Data?</h4>
 
 <ul>
   <li>
-<strong>Binning 구간화</strong>
+    <p><strong>Binning 구간화</strong></p>
+
     <ul>
-      <li>first sort data and partition into (equal-frequency) bins</li>
-      <li>then one can smooth by bin means, smooth by bin median, smooth by bin boundaries, etc.</li>
+      <li>
+        <p>first sort data and partition into (equal-frequency) bins</p>
+      </li>
+      <li>
+        <p>then one can smooth by bin means(평균), smooth by bin median(중앙값), smooth by bin boundaries(최대, 최소 중 가까운 쪽 값, 즉 경계값으로 대체됨), etc.</p>
+      </li>
     </ul>
   </li>
   <li>
-<strong>Regression 회귀</strong>
+    <p><strong>Regression 회귀</strong></p>
+
     <ul>
-      <li>smooth by fitting the data into regression functions</li>
+      <li>
+        <p>smooth by fitting the data into regression functions</p>
+      </li>
+      <li>
+        <p>두 개 이상의 속성으로 다른 속성을 예측해 최선의 직선을 찾는다.</p>
+      </li>
     </ul>
   </li>
   <li>
-<strong>Clustering 군집화</strong>
+    <p><strong>Clustering 군집화</strong></p>
+
     <ul>
-      <li>detect and remove outliers</li>
+      <li>
+        <p>detect and remove outliers</p>
+      </li>
+      <li>
+        <p>유사한 값들을 묶어서 그룹을 만들고, 그 그룹에서 벗어난 값들을 제거한다. (즉, outlier 대상으로 smoothing)</p>
+      </li>
     </ul>
   </li>
   <li>
-<strong>Combined computer and human inspection</strong>
+    <p><strong>Combined computer and human inspection</strong></p>
+
     <ul>
-      <li>detect suspicious values and check by human (e.g., deal with possible outliers)</li>
+      <li>
+        <p>detect suspicious values and check by human</p>
+      </li>
+      <li>
+        <p>e.g., deal with possible outliers</p>
+      </li>
     </ul>
   </li>
 </ul>
 
-<h2 id="data-integration-1">Data Integration</h2>
+<p><br></p>
+
+<h2 id="data-integration">Data Integration</h2>
 
 <ul>
   <li>
-<strong>Data integration 데이터 통합</strong>:
-    <ul>
-      <li>Combines data from multiple sources into a coherent store (여러가지 소스의 데이터를 합치는 것)</li>
-    </ul>
-  </li>
-  <li>Schema integration 스키마 통합:
-    <ul>
-      <li>Integrate metadata from different sources</li>
-    </ul>
+    <p><strong>Data integration 데이터 통합</strong></p>
+
+    <p>Combines data from multiple sources into a coherent store (여러가지 소스의 데이터를 합치는 것)</p>
   </li>
   <li>
-<strong>Entity identification problem</strong>:
-    <ul>
-      <li>Identify real world entities from multiple data sources (각각의 sample들이 여러가지 데이터 소스에서 오기 때문에 이름 같은 것들이 다를 수 있다.)
-        <ul>
-          <li>e.g. Bill Clinton = William Clinton</li>
-        </ul>
-      </li>
-    </ul>
+    <p>Schema integration 스키마 통합</p>
+
+    <p>Integrate metadata from different sources</p>
   </li>
   <li>
-<strong>Detecting and resolving data value conflicts</strong>
-    <ul>
-      <li>For the same real world entity, attribute values from different sources are different</li>
-      <li>Possible reasons: different representations, different scales
-        <ul>
-          <li>e.g. metric vs. British units</li>
-        </ul>
-      </li>
-    </ul>
+    <p><strong>Entity identification problem</strong></p>
+
+    <p>Identify real world entities from multiple data sources (각각의 sample들이 여러가지 데이터 소스에서 오기 때문에 이름 같은 것들이 다를 수 있다.)</p>
+
+    <p>(e.g. Bill Clinton = William Clinton)</p>
+  </li>
+  <li>
+    <p><strong>Detecting and resolving data value conflicts</strong></p>
+
+    <p>For the same real world entity, attribute values from different sources are different</p>
+
+    <p>Possible reasons: different representations, different scales</p>
+
+    <p>(e.g. metric vs. British units)</p>
   </li>
 </ul>
 
 <h3 id="handling-redundancy-in-data-integration-데이터-통합에서-중복을-제거하는-방법">Handling Redundancy in Data Integration (데이터 통합에서 중복을 제거하는 방법)</h3>
 
 <ul>
-  <li>Redundant data occur often when integration of multiple databases
+  <li>
+    <p>Redundant data occur often when integration of multiple databases</p>
+
     <ul>
-      <li>Object identification: The same attribute or object may have different names in different databases</li>
-      <li>Derivable data: One attribute may be a “derived” attribute in another table, e.g., annual revenue</li>
+      <li>
+        <p>Object identification: The same attribute or object may have different names in different databases</p>
+      </li>
+      <li>
+        <p>Derivable data: One attribute may be a “derived” attribute in another table, e.g., annual revenue</p>
+      </li>
     </ul>
   </li>
-  <li>Redundant attributes may be able to be detected by correlation analysis and covariance analysis</li>
-  <li>Careful integration of the data from multiple sources may help reduce/avoid redundancies and inconsistencies and improve mining speed and quality</li>
+  <li>
+    <p>Redundant attributes may be able to be detected by correlation analysis and covariance analysis</p>
+  </li>
+  <li>
+    <p>Careful integration of the data from multiple sources may help reduce/avoid redundancies and inconsistencies and improve mining speed and quality</p>
+  </li>
 </ul>
 
 <h4 id="correlation-analysis-nominal-data">Correlation Analysis (Nominal Data)</h4>
 
 <ul>
   <li>
-<strong>$x^2$ (chi-square) test</strong>
+    <p><strong>$x^2$ (chi-square) test</strong></p>
+
     <ul>
-      <li><strong>두 개의 변수가 있을 때, 그 변수의 예측값과 실측값들의 분포를 비교해서 얼마나 두 개의 다른 categorical variable이 서로 관련이 있는지를 본다.</strong></li>
-      <li>The larger the $x^2$ value, the more likely the variables are related</li>
-      <li>The cells that contribute the most to the $x^2$ value are those whose actual count is very different from the expected count</li>
+      <li>
+        <p>$x^2=\sum{(observed-Expected)^2\over Expected}$</p>
+      </li>
+      <li>
+        <p><strong>두 개의 변수가 있을 때, 그 변수의 예측값과 실측값들의 분포를 비교해서 얼마나 두 개의 다른 categorical variable이 서로 관련이 있는지를 본다.</strong></p>
+      </li>
+      <li>
+        <p>The larger the $x^2$ value, the more likely the variables are related</p>
+      </li>
+      <li>
+        <p>The cells that contribute the most to the $x^2$ value are those whose actual count is very different from the expected count</p>
+      </li>
     </ul>
   </li>
-</ul>
-
-<p>$$
-x^2=\sum{(observed-Expected)^2\over Expected}
-$$</p>
-
-<ul>
   <li>
-<a href="https://ko.wikipedia.org/wiki/%EC%83%81%EA%B4%80%EA%B4%80%EA%B3%84%EC%99%80_%EC%9D%B8%EA%B3%BC%EA%B4%80%EA%B3%84"><strong>Correlation does not imply causality. 상관관계는 인과관계를 함축하지 않는다.</strong></a>
+    <p><a href="https://ko.wikipedia.org/wiki/%EC%83%81%EA%B4%80%EA%B4%80%EA%B3%84%EC%99%80_%EC%9D%B8%EA%B3%BC%EA%B4%80%EA%B3%84"><strong>Correlation does not imply causality. 상관관계는 인과관계를 함축하지 않는다.</strong></a></p>
+
     <ul>
-      <li>number of hospitals and number of car-theft in a city are correlated</li>
-      <li>Both are causally linked to the third variable: population</li>
+      <li>
+        <p>number of hospitals and number of car-theft in a city are correlated</p>
+      </li>
+      <li>
+        <p>Both are causally linked to the third variable: population
+<br></p>
+      </li>
     </ul>
   </li>
 </ul>
@@ -1364,118 +1573,175 @@ $$</p>
   </tbody>
 </table>
 
-<p>$$
-x^2 = {(250-90)^2 \over 90} + {(50-210)^2\over 210} + {(200-360)^2 \over 360} + {(1000-840)^2 \over 840} = 507.93
-$$</p>
+<p>$x^2={(250-90)^2\over 90}+{(50-210)^2\over 210}+{(200-360)^2\over 360}+{(1000-840)^2\over 840}=507.93$</p>
 
 <ul>
-  <li>첫 번째 변수(: 체스를 할 수 있는지 없는지)와 두 번째 변수(: SF를 좋아하는지 좋아하지 않는지)의 상관관계</li>
-  <li>$x^2$ (chi-squared) calculation (numbers in parenthesis are expected counts calculated based on the data distribution in the two categories)</li>
+  <li>
+    <p>첫 번째 변수(: 체스를 할 수 있는지 없는지)와 두 번째 변수(: SF를 좋아하는지 좋아하지 않는지)의 상관관계</p>
+  </li>
+  <li>
+    <p>$x^2$ (chi-squared) calculation (numbers in parenthesis are expected counts calculated based on the data distribution in the two categories)</p>
+  </li>
 </ul>
 
 <p><img src="https://i.imgur.com/Dk0ybzB.png" alt=""></p>
 
 <ul>
-  <li>Chi-square는 자유도 k(Degree of freedom)에 따라 달라진다.</li>
-  <li>It shows that like_science_fiction and play_chess are correlated in the group</li>
-</ul>
-
-<p>$$
-p(x^2&gt;507.93) \approx 0
-$$</p>
-
-<h4 id="correlation-analysis-numeric-data">Correlation Analysis (Numeric Data)</h4>
-
-<ul>
-  <li>Correlation coefficient (also called <strong>Pearson’s product moment coefficient</strong>)
-    <ul>
-      <li>$n$ = the number of tuples (데이터의 개수),</li>
-      <li>$\bar A$ and $\bar B$  = the respective means of $A$ and $B$ ($A$와 $B$의 평균)</li>
-      <li>$\sigma_A$ and $\sigma_B$ = the respective standard deviation of $A$ and $B$ ($A$와 $B$의 표준편차)</li>
-      <li>$\sum(a_ib_i)$ = the sum of the $AB$ cross-product.</li>
-    </ul>
+  <li>
+    <p>Chi-square는 자유도 k(Degree of freedom)에 따라 달라진다.</p>
+  </li>
+  <li>
+    <p>It shows that like_science_fiction and play_chess are correlated in the group</p>
+  </li>
+  <li>
+    <p>$p(x^2&gt;507.93) \approx 0$
+<br></p>
   </li>
 </ul>
 
-<p>$$
-r_{A,B} = \frac{\sum_{i=1}^{n}(a_i - \bar A)(b_i - \bar B)}{(n-1)\sigma_A \sigma_B} = \frac{\sum_{i=1}^{n}(a_ib_i) - n\bar A\bar B}{(n-1)\sigma_A \sigma_B}
-$$</p>
+<h4 id="correlation-analysis-numeric-data">Correlation Analysis (Numeric Data)</h4>
+<p>: Correlation coefficient (also called <strong>Pearson’s product moment coefficient</strong>)</p>
 
 <ul>
-  <li>If $r_{A,B} &gt; 0$, $A$ and $B$ are positively correlated ($A$’s values increase as $B$’s). The higher, the stronger correlation.</li>
-  <li>$r_{A,B} = 0$: independent (독립)</li>
-  <li>$r_{A,B} &lt; 0$: negatively correlated</li>
+  <li>
+    <p>$r_{A,B} = \frac{\sum_{i=1}^{n}(a_i - \bar A)(b_i - \bar B)}{(n-1)\sigma_A \sigma_B} = \frac{\sum_{i=1}^{n}(a_ib_i) - n\bar A\bar B}{(n-1)\sigma_A \sigma_B}$</p>
+
+    <ul>
+      <li>
+        <p>$n$ = the number of tuples (데이터의 개수),</p>
+      </li>
+      <li>
+        <p>$\bar A$ and $\bar B$  = the respective means of $A$ and $B$ ($A$와 $B$의 평균)</p>
+      </li>
+      <li>
+        <p>$\sigma_A$ and $\sigma_B$ = the respective standard deviation of $A$ and $B$ ($A$와 $B$의 표준편차)</p>
+      </li>
+      <li>
+        <p>$\sum(a_ib_i)$ = the sum of the $AB$ cross-product.</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>If $r_{A,B} &gt; 0$, $A$ and $B$ are positively correlated ($A$’s values increase as $B$’s). The higher, the stronger correlation.</p>
+  </li>
+  <li>
+    <p>$r_{A,B} = 0$: independent (독립)</p>
+  </li>
+  <li>
+    <p>$r_{A,B} &lt; 0$: negatively correlated
+<br></p>
+  </li>
 </ul>
 
 <h4 id="visually-evaluating-correlation">Visually Evaluating Correlation</h4>
 
-<p><img src="https://i.imgur.com/1FeVcAm.png" alt=""></p>
+<p><img src="https://i.imgur.com/1FeVcAm.png" alt="">
+<br></p>
 
 <h4 id="covariance-numeric-data">Covariance (Numeric Data)</h4>
-
-<ul>
-  <li>Covariance is similar to correlation
-$$
-Cov(A,B) = E((A - \bar A)(B - \bar B)) = \frac {\sum_{i=1}^{n}(a_i-\bar A)(b_i - \bar B)}{n}
-$$</li>
-</ul>
-
-<p>$$
-Cov(A,B) = E(A \cdot B) - \bar A \bar B
-\qquad r_{A,B} = \frac{Cov(A, B)}{\sigma_A \sigma_B}
-$$</p>
+<p>: Covariance is similar to correlation</p>
 
 <ul>
   <li>
-<strong>Positive covariance</strong>: If $Cov(A,B) &gt; 0$, then $A$ and $B$ both tend to be larger than their expected values.</li>
+    <p>$Cov(A,B) = E((A - \bar A)(B - \bar B)) = \frac {\sum_{i=1}^{n}(a_i-\bar A)(b_i - \bar B)}{n}$</p>
+  </li>
   <li>
-<strong>Negative covariance</strong>: If $Cov(A,B) &lt; 0$ then if $A$ is larger than its expected value, $B$ is likely to be smaller than its expected value.</li>
+    <p>$Cov(A,B) = E(A \cdot B) - \bar A \bar B \qquad r_{A,B} = \frac{Cov(A, B)}{\sigma_A \sigma_B}$</p>
+  </li>
   <li>
-<strong>Independence</strong>: $Cov(A,B = 0)$ but the converse is not true</li>
+    <dl>
+      <dt><strong>Positive covariance</strong></dt>
+      <dd>: If $Cov(A,B) &gt; 0$, then $A$ and $B$ both tend to be larger than their expected values.</dd>
+    </dl>
+  </li>
+  <li>
+    <dl>
+      <dt><strong>Negative covariance</strong></dt>
+      <dd>: If $Cov(A,B) &lt; 0$ then if $A$ is larger than its expected value, $B$ is likely to be smaller than its expected value.</dd>
+    </dl>
+  </li>
+  <li>
+    <dl>
+      <dt><strong>Independence</strong></dt>
+      <dd>: $Cov(A,B = 0)$ but the converse is not true
+<br>
+</dd>
+    </dl>
+  </li>
 </ul>
 
 <h4 id="covariance-an-example">Covariance: An Example</h4>
 
 <ul>
-  <li>Suppose two stocks $A$ and $B$ have the following values in one week: (2, 5), (3, 8), (5, 10), (4, 11), (6, 14).</li>
-  <li>Question: If the stocks are affected by the same industry trends, will their prices rise or fall together?
+  <li>
+    <p>Suppose two stocks $A$ and $B$ have the following values in one week: (2, 5), (3, 8), (5, 10), (4, 11), (6, 14).</p>
+  </li>
+  <li>
+    <p>Question: If the stocks are affected by the same industry trends, will their prices rise or fall together?</p>
+
     <ul>
-      <li>$E(A)=(2+3+5+4+6)/5=20/5=4$</li>
-      <li>$E(B)=(5+8+10+11+14)/5=48/5=9.6$</li>
-      <li>$Cov(A,B) = (2×5+3×8+5×10+4×11+6×14)/5 − 4 × 9.6 = 4$</li>
+      <li>
+        <p>$E(A)=(2+3+5+4+6)/5=20/5=4$</p>
+      </li>
+      <li>
+        <p>$E(B)=(5+8+10+11+14)/5=48/5=9.6$</p>
+      </li>
+      <li>
+        <p>$Cov(A,B) = (2×5+3×8+5×10+4×11+6×14)/5 − 4 × 9.6 = 4$</p>
+      </li>
     </ul>
   </li>
-  <li>Thus, $A$ and $B$ rise together since $Cov(A, B) &gt; 0$.</li>
+  <li>
+    <p>Thus, $A$ and $B$ rise together since $Cov(A, B) &gt; 0$.
+<br></p>
+  </li>
 </ul>
 
-<h2 id="data-reduction-1">Data Reduction</h2>
+<h2 id="data-reduction">Data Reduction</h2>
 
 <h3 id="data-reduction-1-dimensionality-reduction">Data Reduction 1: Dimensionality Reduction</h3>
 
 <ul>
   <li>
-<strong>Curse of dimensionality 차원의 저주</strong>
+    <p><strong>Curse of dimensionality 차원의 저주</strong></p>
+
     <ul>
       <li>
-<strong>When dimensionality increases</strong>, data becomes increasingly <strong>sparse (희소해진다)</strong>
-</li>
-      <li>Density and distance between points, which is critical to clustering, outlier analysis, becomes less meaningful</li>
+        <p><strong>When dimensionality increases</strong>, data becomes increasingly <strong>sparse (희소해진다)</strong></p>
+      </li>
+      <li>
+        <p>Density and distance between points, which is critical to clustering, outlier analysis, becomes less meaningful</p>
+      </li>
     </ul>
   </li>
   <li>
-<strong>Dimensionality reduction 차원 축소</strong>
+    <p><strong>Dimensionality reduction 차원 축소</strong></p>
+
     <ul>
-      <li>Avoid the curse of dimensionality</li>
-      <li>Help eliminate irrelevant features and reduce noise</li>
-      <li>Reduce time and space required in data mining</li>
-      <li>Allow easier visualization</li>
+      <li>
+        <p>Avoid the curse of dimensionality</p>
+      </li>
+      <li>
+        <p>Help eliminate irrelevant features and reduce noise</p>
+      </li>
+      <li>
+        <p>Reduce time and space required in data mining</p>
+      </li>
+      <li>
+        <p>Allow easier visualization</p>
+      </li>
     </ul>
   </li>
   <li>
-<strong>Dimensionality reduction techniques 차원 축소 기술</strong>
+    <p><strong>Dimensionality reduction techniques 차원 축소 기술</strong></p>
+
     <ul>
-      <li>Wavelet transforms</li>
-      <li>Principal Component Analysis</li>
+      <li>
+        <p>Wavelet transforms</p>
+      </li>
+      <li>
+        <p>Principal Component Analysis</p>
+      </li>
     </ul>
   </li>
 </ul>
@@ -1483,19 +1749,31 @@ $$</p>
 <h4 id="attribute-subset-selection">Attribute Subset Selection</h4>
 
 <ul>
-  <li>One way to reduce dimensionality of data</li>
   <li>
-<strong>Redundant attributes 중복된 변수 제거</strong>
+    <p>One way to reduce dimensionality of data</p>
+  </li>
+  <li>
+    <p><strong>Redundant attributes 중복된 변수 제거</strong></p>
+
     <ul>
-      <li>Duplicate much or all of the information contained in one or more other attributes</li>
-      <li>e.g., purchase price of a product and the amount of sales tax paid</li>
+      <li>
+        <p>Duplicate much or all of the information contained in one or more other attributes</p>
+      </li>
+      <li>
+        <p>e.g., purchase price of a product and the amount of sales tax paid</p>
+      </li>
     </ul>
   </li>
   <li>
-<strong>Irrelevant attributes 상관없는 변수 제거</strong>
+    <p><strong>Irrelevant attributes 상관없는 변수 제거</strong></p>
+
     <ul>
-      <li>Contain no information that is useful for the <strong>data mining task</strong> at hand</li>
-      <li>e.g., students’ ID is often irrelevant to the task of predicting students’ GPA</li>
+      <li>
+        <p>Contain no information that is useful for the <strong>data mining task</strong> at hand</p>
+      </li>
+      <li>
+        <p>e.g., students’ ID is often irrelevant to the task of predicting students’ GPA</p>
+      </li>
     </ul>
   </li>
 </ul>
@@ -1504,22 +1782,40 @@ $$</p>
 
 <ul>
   <li>
-<strong>Clustering</strong>
+    <p><strong>Clustering</strong></p>
+
     <ul>
-      <li>Partition data set into clusters based on similarity, and store cluster representation (e.g., centroid and diameter) only</li>
-      <li>Can be very effective if data is clustered but not if data is “smeared”</li>
-      <li>Can have hierarchical clustering and be stored in multi-dimensional index tree structures</li>
+      <li>
+        <p>Partition data set into clusters based on similarity, and store cluster representation (e.g., centroid and diameter) only</p>
+      </li>
+      <li>
+        <p>Can be very effective if data is clustered but not if data is “smeared”</p>
+      </li>
+      <li>
+        <p>Can have hierarchical clustering and be stored in multi-dimensional index tree structures</p>
+      </li>
     </ul>
   </li>
   <li>
-<strong>Sampling</strong>
+    <p><strong>Sampling</strong></p>
+
     <ul>
-      <li>Obtaining a small sample s to represent the whole data set $N$</li>
-      <li>Sampling is typically used in data mining when processing the entire set of data of interest is too expensive or time consuming.</li>
-      <li>Key principles for effective sampling are:
+      <li>
+        <p>Obtaining a small sample s to represent the whole data set $N$</p>
+      </li>
+      <li>
+        <p>Sampling is typically used in data mining when processing the entire set of data of interest is too expensive or time consuming.</p>
+      </li>
+      <li>
+        <p>Key principles for effective sampling are:</p>
+
         <ul>
-          <li>A sample is representative if it has approximately the same properties (of interest) as the original data set.</li>
-          <li>If a sample is representative, using the sample will work almost as well as using the entire data set.</li>
+          <li>
+            <p>A sample is representative if it has approximately the same properties (of interest) as the original data set.</p>
+          </li>
+          <li>
+            <p>If a sample is representative, using the sample will work almost as well as using the entire data set.</p>
+          </li>
         </ul>
       </li>
     </ul>
@@ -1530,27 +1826,44 @@ $$</p>
 
 <ul>
   <li>
-<strong>Simple Random Sampling</strong>
+    <p><strong>Simple Random Sampling</strong></p>
+
     <ul>
-      <li>There is an equal probability of selecting any particular object</li>
       <li>
-<strong>Sampling without replacement 비복원 추출</strong>
+        <p>There is an equal probability of selecting any particular object</p>
+      </li>
+      <li>
+        <p><strong>Sampling without replacement 비복원 추출</strong></p>
+
         <ul>
-          <li>As each object is selected, it is removed from the population</li>
+          <li>
+            <p>As each object is selected, it is removed from the population</p>
+          </li>
+          <li>
+            <p>The same object cannot be picked up more than once</p>
+          </li>
         </ul>
       </li>
       <li>
-<strong>Sampling with replacement 복원 추출</strong>
+        <p><strong>Sampling with replacement 복원 추출</strong></p>
+
         <ul>
-          <li>Objects are not removed from the population as they are selected for the sample</li>
-          <li>The same object can be picked up more than once</li>
+          <li>
+            <p>Objects are not removed from the population as they are selected for the sample</p>
+          </li>
+          <li>
+            <p>The same object can be picked up more than once</p>
+          </li>
         </ul>
       </li>
-      <li>Simple random sampling may have very poor performance in the presence of skew</li>
+      <li>
+        <p>Simple random sampling may have very poor performance in the presence of skew</p>
+      </li>
     </ul>
   </li>
   <li>
-<strong>Stratified Sampling</strong>
+    <p><strong>Stratified Sampling</strong></p>
+
     <ul>
       <li>Split the data into several partitions; then draw a random sample from each partition (데이터를 뽑을 때, 파티션을 나눠서 뽑는 샘플링)</li>
     </ul>
@@ -1565,34 +1878,47 @@ $$</p>
 
 <p><img src="https://i.imgur.com/ypVPJli.png" alt=""></p>
 
-<h2 id="data-transformation-1">Data Transformation</h2>
+<h2 id="data-transformation">Data Transformation</h2>
 
 <ul>
-  <li>A function that maps the entire set of values of <strong>a given attribute</strong> to a new set of replacement values s.t. each old value can be identified with one of the new values</li>
-  <li>Methods
+  <li>
+    <p>A function that maps the entire set of values of <strong>a given attribute</strong> to a new set of replacement values s.t. each old value can be identified with one of the new values</p>
+  </li>
+  <li>
+    <p>Methods</p>
+
     <ul>
       <li>
-<strong>Smoothing</strong>: Remove noise from data (평균을 적용해서 노이즈를 제거하는 것 - ex.이동평균)</li>
-      <li>Attribute/feature construction
-        <ul>
-          <li>New attributes constructed from the given ones</li>
-        </ul>
+        <p><strong>Smoothing</strong>: Remove noise from data (평균을 적용해서 노이즈를 제거하는 것 - ex.이동평균)</p>
       </li>
-      <li>Simple function: $xk$, $\log(1+x)$, $e^x$, $\left \vert x \right \vert$, $\dots$
+      <li>
+        <p>Attribute/feature construction</p>
+
+        <p>-New attributes constructed from the given ones</p>
+      </li>
+      <li>
+        <p>Simple function: $xk$, $\log(1+x)$, $e^x$, $\left \vert x \right \vert$, $\dots$</p>
+
+        <p>-금융 데이터의 경우, 수치 그 자체보다 비율이 중요하기 때문에 대부분 $\log$ 를 취한다.</p>
+      </li>
+      <li>
+        <p><strong>Normalization 정규화</strong>: Scaled to fall within a smaller, specified range (값을 어떤 범위 안에 넣어 주는 것 - 모든 데이터를 일관적인 형태로 관리하기 위함.)</p>
+
         <ul>
-          <li>금융 데이터의 경우, 수치 그 자체보다 비율이 중요하기 때문에 대부분 $\log$ 를 취한다.</li>
+          <li>
+            <p>min-max normalization</p>
+          </li>
+          <li>
+            <p>z-score normalization</p>
+          </li>
+          <li>
+            <p>normalization by decimal scaling</p>
+          </li>
         </ul>
       </li>
       <li>
-<strong>Normalization 정규화</strong>: Scaled to fall within a smaller, specified range (값을 어떤 범위 안에 넣어 주는 것 - 모든 데이터를 일관적인 형태로 관리하기 위함.)
-        <ul>
-          <li>min-max normalization</li>
-          <li>z-score normalization</li>
-          <li>normalization by decimal scaling</li>
-        </ul>
+        <p><strong>Discretization</strong>: Concept hierarchy climbing (연속적인 변수를 잘라서 나누는 것)</p>
       </li>
-      <li>
-<strong>Discretization</strong>: Concept hierarchy climbing (연속적인 변수를 잘라서 나누는 것)</li>
     </ul>
   </li>
 </ul>
@@ -1601,31 +1927,42 @@ $$</p>
 
 <ul>
   <li>
-<strong>Min-max normalization</strong>: to $newmin_A$, $newmax_A$
+    <p><strong>Min-max normalization</strong>: to $newmin_A$, $newmax_A$</p>
+
     <ul>
-      <li>Ex. Let income range 12,000 to 98,000 normalized to $[0.0, 1.0]$</li>
-      <li>The 73,000 is mapped to $\frac{73600−12000}{98000-12000} (1 − 0) + 0 = 0.716$</li>
+      <li>
+        <p>$v\prime = \frac {v-min_A}{max_A - min_A} (newmax_A - newmin_A) + newmin_A$</p>
+
+        <ul>
+          <li>
+            <p>$v$ 라는 값에 내가 가진 attribute의 가장 작은 $min$ 값을 빼주고, $max - min$으로 나누어 주면 모든 값이 0~1 사이로 가게 된다.</p>
+          </li>
+          <li>
+            <p>모든 값들을 가장 큰 값을 1로 두고, 가장 작은 값을 0으로 두고, 그것을 linear하게 꾸미는 형태가 normalization 정규화이다.</p>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p>Ex. Let income range 12,000 to 98,000 normalized to $[0.0, 1.0]$</p>
+      </li>
+      <li>
+        <p>The 73,000 is mapped to $\frac{73600−12000}{98000-12000} (1 − 0) + 0 = 0.716$</p>
+      </li>
     </ul>
   </li>
-</ul>
-
-<p>$$
-v\prime = \frac {v-min_A}{max_A - min_A} (newmax_A - newmin_A) + newmin_A
-$$</p>
-
-<ul>
-  <li>$v$ 라는 값에 내가 가진 attribute의 가장 작은 $min$ 값을 빼주고, $max - min$으로 나누어 주면 모든 값이 0~1 사이로 가게 된다. 모든 값들을 가장 큰 값을 1로 두고, 가장 작은 값을 0으로 두고, 그것을 linear하게 꾸미는 형태가 normalization 정규화이다.</li>
   <li>
-<strong>Z-score normalization</strong> ($\mu$: mean, $\sigma$: standard deviation):
+    <p><strong>Z-score normalization</strong> ($\mu$: mean, $\sigma$: standard deviation):</p>
+
     <ul>
-      <li>Ex. Let $\mu=54,000$ , $\sigma=16,000$ . Then, $\frac{73600-54000}{16000}=1.225$</li>
+      <li>
+        <p>$v\prime = \frac{v - \mu_A}{\sigma_A}$</p>
+      </li>
+      <li>
+        <p>Ex. Let $\mu=54,000$ , $\sigma=16,000$ . Then, $\frac{73600-54000}{16000}=1.225$</p>
+      </li>
     </ul>
   </li>
 </ul>
-
-<p>$$
-v\prime = \frac{v - \mu_A}{\sigma_A}
-$$</p>
 
 <p>=&gt; ex. 표준점수 (표준편차로 변환해서 내가 평균보다 얼마나 많이 앞서있는지($\sigma$) 알아본다)</p>
 
@@ -1633,23 +1970,43 @@ $$</p>
 
 <ul>
   <li>
-<strong>Three types of attributes</strong>
+    <p><strong>Three types of attributes</strong></p>
+
     <ul>
-      <li>Nominal — values from an unordered set, e.g., color, profession</li>
-      <li>Ordinal — values from an ordered set, e.g., military or academic rank</li>
-      <li>Numeric — real numbers, e.g., integer or real numbers</li>
+      <li>
+        <p>Nominal — values from an unordered set, e.g., color, profession</p>
+      </li>
+      <li>
+        <p>Ordinal — values from an ordered set, e.g., military or academic rank</p>
+      </li>
+      <li>
+        <p>Numeric — real numbers, e.g., integer or real numbers</p>
+      </li>
     </ul>
   </li>
   <li>
-<strong>Discretization: Divide the range of a continuous attribute into intervals</strong><br>
-(어떠한 기준을 가지고 나누는지가 중요한 관건이 된다)
+    <p><strong>Discretization: Divide the range of a continuous attribute into intervals</strong><br>
+<strong>어떠한 기준을 가지고 나누는지가 중요한 관건이 된다</strong></p>
+
     <ul>
-      <li>Interval labels can then be used to replace actual data values</li>
-      <li>Reduce data size by discretization</li>
-      <li><strong>Supervised vs. unsupervised</strong></li>
-      <li>Split (top-down) vs. merge (bottom-up)</li>
-      <li>Discretization can be performed recursively on an attribute</li>
-      <li>Prepare for further analysis, e.g., classification</li>
+      <li>
+        <p>Interval labels can then be used to replace actual data values</p>
+      </li>
+      <li>
+        <p>Reduce data size by discretization</p>
+      </li>
+      <li>
+        <p><strong>Supervised vs. unsupervised</strong></p>
+      </li>
+      <li>
+        <p>Split (top-down) vs. merge (bottom-up)</p>
+      </li>
+      <li>
+        <p>Discretization can be performed recursively on an attribute</p>
+      </li>
+      <li>
+        <p>Prepare for further analysis, e.g., classification</p>
+      </li>
     </ul>
 
     <p><strong>=&gt; 데이터를 단순화시키고 싶을 때 많이 쓰는 방법</strong></p>
@@ -1660,20 +2017,36 @@ $$</p>
 
 <ul>
   <li>
-<strong>Equal-width (distance)</strong> partitioning
+    <p><strong>Equal-width (distance)</strong> partitioning</p>
+
     <ul>
-      <li>Divides the range into N intervals of equal size: uniform grid</li>
-      <li>if $A$ and $B$ are the lowest and highest values of the attribute, the width of intervals will be: $W = (B –A)/N$</li>
-      <li>The most straightforward, but outliers may dominate presentation</li>
-      <li>Skewed data is not handled well</li>
+      <li>
+        <p>Divides the range into N intervals of equal size: uniform grid</p>
+      </li>
+      <li>
+        <p>if $A$ and $B$ are the lowest and highest values of the attribute, the width of intervals will be: $W = (B –A)/N$</p>
+      </li>
+      <li>
+        <p>The most straightforward, but outliers may dominate presentation</p>
+      </li>
+      <li>
+        <p>Skewed data is not handled well</p>
+      </li>
     </ul>
   </li>
   <li>
-<strong>Equal-depth (frequency)</strong> partitioning
+    <p><strong>Equal-depth (frequency)</strong> partitioning</p>
+
     <ul>
-      <li>Divides the range into N intervals, each containing approximately same number of samples</li>
-      <li>Good data scaling</li>
-      <li>Managing categorical attributes can be tricky</li>
+      <li>
+        <p>Divides the range into N intervals, each containing approximately same number of samples</p>
+      </li>
+      <li>
+        <p>Good data scaling</p>
+      </li>
+      <li>
+        <p>Managing categorical attributes can be tricky</p>
+      </li>
     </ul>
   </li>
 </ul>
@@ -1681,26 +2054,52 @@ $$</p>
 <h4 id="binning-methods-for-data-smoothing">Binning Methods for Data Smoothing</h4>
 
 <ul>
-  <li>Sorted data for price (in dollars): 4, 8, 9, 15, 21, 21, 24, 25, 26, 28, 29, 34</li>
-  <li>Partition into <strong>equal-frequency (equi-depth)</strong> bins:
+  <li>
+    <p>Sorted data for price (in dollars): 4, 8, 9, 15, 21, 21, 24, 25, 26, 28, 29, 34</p>
+  </li>
+  <li>
+    <p>Partition into <strong>equal-frequency (equi-depth)</strong> bins:</p>
+
     <ul>
-      <li>Bin 1: 4, 8, 9, 15</li>
-      <li>Bin 2: 21, 21, 24, 25</li>
-      <li>Bin 3: 26, 28, 29, 34</li>
+      <li>
+        <p>Bin 1: 4, 8, 9, 15</p>
+      </li>
+      <li>
+        <p>Bin 2: 21, 21, 24, 25</p>
+      </li>
+      <li>
+        <p>Bin 3: 26, 28, 29, 34</p>
+      </li>
     </ul>
   </li>
-  <li>Smoothing by <strong>bin means</strong>:
+  <li>
+    <p>Smoothing by <strong>bin means</strong>:</p>
+
     <ul>
-      <li>Bin 1: 9, 9, 9, 9</li>
-      <li>Bin 2: 23, 23, 23, 23</li>
-      <li>Bin 3: 29, 29, 29, 29</li>
+      <li>
+        <p>Bin 1: 9, 9, 9, 9</p>
+      </li>
+      <li>
+        <p>Bin 2: 23, 23, 23, 23</p>
+      </li>
+      <li>
+        <p>Bin 3: 29, 29, 29, 29</p>
+      </li>
     </ul>
   </li>
-  <li>Smoothing by <strong>bin boundaries</strong>:
+  <li>
+    <p>Smoothing by <strong>bin boundaries</strong>:</p>
+
     <ul>
-      <li>Bin 1: 4, 4, 4, 15</li>
-      <li>Bin 2: 21, 21, 25, 25</li>
-      <li>Bin 3: 26, 26, 26, 34</li>
+      <li>
+        <p>Bin 1: 4, 4, 4, 15</p>
+      </li>
+      <li>
+        <p>Bin 2: 21, 21, 25, 25</p>
+      </li>
+      <li>
+        <p>Bin 3: 26, 26, 26, 34</p>
+      </li>
     </ul>
   </li>
 </ul>
@@ -1710,10 +2109,16 @@ $$</p>
 <h3 id="binarization-one-hot-encoding">Binarization (One-hot-encoding)</h3>
 
 <ul>
-  <li>Binarization <strong>maps a continuous or categorical attribute into one or more binary attributes</strong>
+  <li>
+    <p>Binarization <strong>maps a continuous or categorical attribute into one or more binary attributes</strong></p>
+
     <ul>
-      <li>Often convert a continuous attribute to a categorical attribute and then convert the categorical attribute to a set of binary attributes</li>
-      <li>Typically used for association analysis</li>
+      <li>
+        <p>Often convert a continuous attribute to a categorical attribute and then convert the categorical attribute to a set of binary attributes</p>
+      </li>
+      <li>
+        <p>Typically used for association analysis</p>
+      </li>
     </ul>
   </li>
 </ul>
@@ -1725,18 +2130,35 @@ $$</p>
 <h3 id="summary-statistics">Summary Statistics</h3>
 
 <ul>
-  <li>Summary statistics are numbers that summarize properties of the data
+  <li>
+    <p>Summary statistics are numbers that summarize properties of the data</p>
+
     <ul>
-      <li>For <strong>categorical attributes</strong>
+      <li>
+        <p>For <strong>categorical attributes</strong></p>
+
         <ul>
-          <li>Frequency, Mode</li>
+          <li>
+            <p>Frequency</p>
+          </li>
+          <li>
+            <p>Mode</p>
+          </li>
         </ul>
       </li>
-      <li>For <strong>continuous attributes</strong>
+      <li>
+        <p>For <strong>continuous attributes</strong></p>
+
         <ul>
-          <li>Percentiles</li>
-          <li>Measures of Location: Mean and Median</li>
-          <li>Measures of Spread: Range and Variance</li>
+          <li>
+            <p>Percentiles</p>
+          </li>
+          <li>
+            <p>Measures of Location: Mean and Median</p>
+          </li>
+          <li>
+            <p>Measures of Spread: Range and Variance</p>
+          </li>
         </ul>
       </li>
     </ul>
@@ -1746,11 +2168,19 @@ $$</p>
 <h3 id="histograms">Histograms</h3>
 
 <ul>
-  <li>Used to plot the distribution of the values of <strong>a single attribute</strong> (<strong>한 가지 변수</strong>가 어떻게 분포되어 있는지)
+  <li>
+    <p>Used to plot the distribution of the values of <strong>a single attribute</strong> (<strong>한 가지 변수</strong>가 어떻게 분포되어 있는지)</p>
+
     <ul>
-      <li>It divide the values into bins and shows a bar plot of the number of objects in each bin</li>
-      <li>The height of each bar indicates the number of objects</li>
-      <li>Shape of histogram depends on <strong>the number of bins</strong> (<strong>$x$축을 얼마나 잘게 나눌지 결정하는 요소</strong>인 bin 개수를 결정하는 것이 중요하다.)</li>
+      <li>
+        <p>It divide the values into bins and shows a bar plot of the number of objects in each bin</p>
+      </li>
+      <li>
+        <p>The height of each bar indicates the number of objects</p>
+      </li>
+      <li>
+        <p>Shape of histogram depends on <strong>the number of bins</strong> (<strong>$x$축을 얼마나 잘게 나눌지 결정하는 요소</strong>인 bin 개수를 결정하는 것이 중요하다.)</p>
+      </li>
     </ul>
   </li>
 </ul>
@@ -1758,7 +2188,9 @@ $$</p>
 <p><img src="https://i.imgur.com/ScSloAn.png" alt=""></p>
 
 <ul>
-  <li>Two-Dimensional Histograms
+  <li>
+    <p>Two-Dimensional Histograms</p>
+
     <ul>
       <li>Used to plot the joint distribution of the values of two attributes</li>
     </ul>
@@ -1770,10 +2202,12 @@ $$</p>
 <h3 id="box-plots">Box Plots</h3>
 
 <ul>
-  <li>Another way of displaying the <strong>distribution 분포 of data</strong>
-</li>
-  <li>Box plots can be used to <strong>compare 비교 attributes</strong>
-</li>
+  <li>
+    <p>Another way of displaying the <strong>distribution 분포 of data</strong></p>
+  </li>
+  <li>
+    <p>Box plots can be used to <strong>compare 비교 attributes</strong></p>
+  </li>
 </ul>
 
 <p><img src="https://i.imgur.com/oN3sEB7.png" alt=""></p>
@@ -1781,29 +2215,48 @@ $$</p>
 <p><img src="https://i.imgur.com/HOtRLKc.png" alt=""></p>
 
 <ul>
-  <li>50th percentile : 100분위수가 50 (=median 중앙값)</li>
-  <li>25th, 75th percentile : 4분위수</li>
+  <li>
+    <p>50th percentile : 100분위수가 50 (=median 중앙값)</p>
+  </li>
+  <li>
+    <p>25th, 75th percentile : 4분위수</p>
+  </li>
 </ul>
 
 <h3 id="scatter-plots">Scatter Plots</h3>
 
 <ul>
-  <li>Used to plot the <strong>pairwise correlations</strong> between attributes (<strong>두 가지 변수</strong>가 어떠한 관계를 가지고 있는지)
+  <li>
+    <p>Used to plot the <strong>pairwise correlations</strong> between attributes (<strong>두 가지 변수</strong>가 어떠한 관계를 가지고 있는지)</p>
+
     <ul>
-      <li>Each data object is depicted as a marker.</li>
-      <li>The position of a marker is determined by the values of its attributes.</li>
-      <li>While two-dimensional scatter plots are most common, three-dimensional scatter plots can also be utilized.</li>
-      <li>Often, additional attributes can be displayed by using the size, shape, and color of the markers that represent the objects</li>
+      <li>
+        <p>Each data object is depicted as a marker.</p>
+      </li>
+      <li>
+        <p>The position of a marker is determined by the values of its attributes.</p>
+      </li>
+      <li>
+        <p>While two-dimensional scatter plots are most common, three-dimensional scatter plots can also be utilized.</p>
+      </li>
+      <li>
+        <p>Often, additional attributes can be displayed by using the size, shape, and color of the markers that represent the objects</p>
+      </li>
     </ul>
   </li>
-  <li>Additional attributes can be incorporated into scatter plots through:
+  <li>
+    <p>Additional attributes can be incorporated into scatter plots through:</p>
+
     <ul>
       <li>
-<strong>Marker Size</strong>: Representing an attribute using the size of markers.</li>
+        <p><strong>Marker Size</strong>: Representing an attribute using the size of markers.</p>
+      </li>
       <li>
-<strong>Marker Shape</strong>: Differentiating markers based on an additional attribute.</li>
+        <p><strong>Marker Shape</strong>: Differentiating markers based on an additional attribute.</p>
+      </li>
       <li>
-<strong>Marker Color</strong>: Using color variation to convey information about another attribute.</li>
+        <p><strong>Marker Color</strong>: Using color variation to convey information about another attribute.</p>
+      </li>
     </ul>
   </li>
 </ul>
@@ -1811,8 +2264,12 @@ $$</p>
 <p><img src="https://i.imgur.com/CvkfoFP.png" alt="CvkfoFP.png"></p>
 
 <ul>
-  <li>petal_length와 petal_width는 선형적 관계가 있음. (비례하는 형태의 데이터 구성)</li>
-  <li>sepal_width와 sepal_length는 관련이 없다.</li>
+  <li>
+    <p>petal_length와 petal_width는 선형적 관계가 있음. (비례하는 형태의 데이터 구성)</p>
+  </li>
+  <li>
+    <p>sepal_width와 sepal_length는 관련이 없다.</p>
+  </li>
 </ul>
 
 
@@ -1834,14 +2291,6 @@ $$</p>
 </span>
 </a>
         </li>
-<li class="top-post">
-          <a class="post-link" href="/github/2023/09/22/github-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0-2.html" title="Github.io 블로그 만들기 - 2">
-            Github.io 블로그 만들기 - 2<span class="post-badges">
-  <span class="post-badge badge-top">TOP</span>
-  <span class="post-badge badge-new">NEW</span>
-</span>
-</a>
-        </li>
 <li class="">
           <a class="post-link" href="/dgu/bachelor/of/data/science/2023/09/26/data-preprocessing.html" title="데이터사이언스 개론 Study Note - 1">
             데이터사이언스 개론 Study Note - 1<span class="post-badges">
@@ -1851,8 +2300,16 @@ $$</p>
 </a>
         </li>
 <li class="top-post">
-          <a class="post-link" href="/aston_kim/2023/09/20/welcome-to-my-devlog.html" title="Opening my devlog! 🎉">
-            Opening my devlog! 🎉<span class="post-badges">
+          <a class="post-link" href="/github/2023/09/25/yat-theme.html" title="Github.io 블로그 만들기 - 3">
+            Github.io 블로그 만들기 - 3<span class="post-badges">
+  <span class="post-badge badge-top">TOP</span>
+  <span class="post-badge badge-new">NEW</span>
+</span>
+</a>
+        </li>
+<li class="top-post">
+          <a class="post-link" href="/github/2023/09/22/github-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0-2.html" title="Github.io 블로그 만들기 - 2">
+            Github.io 블로그 만들기 - 2<span class="post-badges">
   <span class="post-badge badge-top">TOP</span>
   <span class="post-badge badge-new">NEW</span>
 </span>
