@@ -3,7 +3,7 @@ layout: post
 title: 데이터마이닝 Study Note - 1
 subtitle: 01. Data Preprocessing
 author: astonkim
-categories: DGU Bachelor of Data Science
+categories: DGU_Bachelor_of_Data_Science
 banner:
   image: /assets/images/20230926.jpg
   opacity: 0.618
