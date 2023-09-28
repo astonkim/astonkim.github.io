@@ -1,9 +1,20 @@
 ---
 layout: post
-title: 데이터사이언스 개론 Study Note - 1
+title: 데이터마이닝 Study Note - 1
 subtitle: 01. Data Preprocessing
+author: astonkim
 categories: DGU Bachelor of Data Science
-tags: [데이터사이언스_개론]
+banner:
+  image: /assets/images/20230926.jpg
+  opacity: 0.618
+  background: "#000"
+  height: "100vh"
+  min_height: "38vh"
+  heading_style: "font-weight: bold; text-shadow: 5px 6px 5px black;"
+  subheading_style: "font-weight: bold; color: gold"
+tags: [data_mining]
+top: 1
+sidebar: []
 use_math: true
 ---
 
